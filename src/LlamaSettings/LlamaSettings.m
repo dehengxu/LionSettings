@@ -22,6 +22,7 @@
 #import "DisplayCell.h"
 #import "SourceCell.h"
 #import "ButtonCell.h"
+#import "SliderCell.h"
 
 #import "MediaPlayer/MPVolumeView.h"
 
@@ -226,7 +227,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 {
 	CGRect frame = CGRectMake(0, 0, kTextFieldWidth, kTextFieldHeight);
 	UITextField * tf = [[UITextField alloc] initWithFrame:frame];
-	tf.borderStyle = UITextBorderStyleRoundedRect;
+    //Close Rounded border style.
+	//tf.borderStyle = UITextBorderStyleRoundedRect;
 	tf.returnKeyType = UIReturnKeyDone;
 	tf.clearButtonMode = UITextFieldViewModeWhileEditing;
 	tf.text = [dict objectForKey:@"DefaultValue"];
@@ -729,6 +731,16 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	//		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 		}
 	}
+    
+    if ([type isEqualToString:@"PSSliderSpecifier"]) {
+//		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+//		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
+//		((DisplayCell *)cell).view = widg;
+        cell = [[[SliderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:0] autorelease];
+        UISlider *_slider = (UISlider *)widg;
+        ((SliderCell *)cell).slider = _slider;
+        
+    }
 
 	if( [type isEqualToString:@"BLVolumeSpecifier"] )
 	{
