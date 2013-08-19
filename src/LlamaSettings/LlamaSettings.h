@@ -35,7 +35,7 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 	BOOL valid;
 	BOOL readyForSaving;
 	
-	NSAutoreleasePool *nsap;
+	//NSAutoreleasePool *nsap;
 }
 
 @property (nonatomic, assign) id delegate;

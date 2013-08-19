@@ -31,7 +31,7 @@
 	NSString * legend;
 	int maxSetColors;
 	int maxSetNames;
-	NSAutoreleasePool * pool;
+	//NSAutoreleasePool * pool;
 }
 @property (nonatomic, assign) id delegate;
 @property (assign,readonly) float r;

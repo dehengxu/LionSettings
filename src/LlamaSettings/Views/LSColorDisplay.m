@@ -55,7 +55,7 @@
 
 - (void) initializeStuff
 {
-	pool = [[NSAutoreleasePool alloc] init];
+	//pool = [[NSAutoreleasePool alloc] init];
 	
 	[self setBackgroundColor:[UIColor clearColor]];
 	[self addTarget:self action:@selector(colorAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -63,14 +63,14 @@
 	touchBehavior = kTouchBehavior_FullPicker;
 	
 	// set colors for the selector - basic primaries
-	[self setItem:0 Name:[NSString stringWithString:@"White"]  ColorStr:@"1.0, 1.0, 1.0"];
-	[self setItem:1 Name:[NSString stringWithString:@"Red"]    ColorStr:@"1.0, 0.0, 0.0"];
-	[self setItem:2 Name:[NSString stringWithString:@"Orange"] ColorStr:@"1.0, 0.5, 1.0"];
-	[self setItem:3 Name:[NSString stringWithString:@"Yellow"] ColorStr:@"1.0, 1.0, 0.0"];
-	[self setItem:4 Name:[NSString stringWithString:@"Green"]  ColorStr:@"0.0, 1.0, 0.0"];
-	[self setItem:5 Name:[NSString stringWithString:@"Cyan"]   ColorStr:@"0.0, 1.0, 1.0"];
-	[self setItem:6 Name:[NSString stringWithString:@"Blue"]   ColorStr:@"0.0, 0.0, 1.0"];
-	[self setItem:7 Name:[NSString stringWithString:@"Purple"] ColorStr:@"1.0, 0.0, 1.0"];
+	[self setItem:0 Name:@"White"  ColorStr:@"1.0, 1.0, 1.0"];
+	[self setItem:1 Name:@"Red"    ColorStr:@"1.0, 0.0, 0.0"];
+	[self setItem:2 Name:@"Orange" ColorStr:@"1.0, 0.5, 1.0"];
+	[self setItem:3 Name:@"Yellow" ColorStr:@"1.0, 1.0, 0.0"];
+	[self setItem:4 Name:@"Green"  ColorStr:@"0.0, 1.0, 0.0"];
+	[self setItem:5 Name:@"Cyan"   ColorStr:@"0.0, 1.0, 1.0"];
+	[self setItem:6 Name:@"Blue"   ColorStr:@"0.0, 0.0, 1.0"];
+	[self setItem:7 Name:@"Purple" ColorStr:@"1.0, 0.0, 1.0"];
 	maxSetColors = 0;
 	maxSetNames = 0;
 	legend = @"Touch to pick a color";
