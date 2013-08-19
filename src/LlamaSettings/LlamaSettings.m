@@ -321,7 +321,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
 	labelWidget.textAlignment = UITextAlignmentRight;
 	[labelWidget setBackgroundColor:[UIColor clearColor]];
-	return labelWidget;
+	return [labelWidget autorelease];
 }
 
 
@@ -348,80 +348,86 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void) loadHeirarchyFromDefaultPlist
 {
-	[self loadHeirarchyFromPlist:@"mySettings.plist"];
+    NSString *settingsBundlePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+	[self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/Root.plist", settingsBundlePath]];
 }
 
 - (void) loadHeirarchyFromPlist:(NSString *)plistName
 {
+    [self loadHeirarchyFromPlistPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:plistName]];    
+}
+
+- (void)loadHeirarchyFromPlistPath:(NSString *)plistPath
+{
 	readyForSaving = NO;
 	if( theDictionary ) [theDictionary release];
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-	theDictionary = [[NSDictionary alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] 
-																			 stringByAppendingPathComponent:plistName]];
-	
-	if( theDictionary == nil ) {
-		NSLog( @"Error loading!" );
-		return;
-	}
-	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
-	if( !preferenceSpecifiers ) {
-		[pool release];
-		return;
-	}
-	
-	if( [preferenceSpecifiers count] == 0 ) {
-		[pool release];
-		return;
-	}
-	self.valid = YES; // presumptuous, i admit
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-	// now, let's set up the precache web view list
-	if( theWebViews ) [theWebViews release];
-	theWebViews = [[NSMutableDictionary alloc] initWithCapacity:1];	
-	
-	// now, let's set up the widget list!
-	if( theWidgets ) [theWidgets release];
-	theWidgets = [[NSMutableDictionary alloc] initWithCapacity:1];
-	
-	for( int x = 0 ; x < [preferenceSpecifiers count] ; x++ )
-	{
-		NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
-		NSString *PSType = [aSpecifier valueForKey:@"Type"];
-		NSString *PSKey = [aSpecifier valueForKey:@"Key"];
-		
-		if( PSKey && PSType ) {
-			id v;
-			if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
-				v = [self create_UISwitchWithDictionary:aSpecifier];
-			} else if( [PSType isEqualToString:@"BLSegmentedSpecifier"] ) {
-				v = [self create_UISegmentedControlWithDictionary:aSpecifier];
-			} else if( [PSType isEqualToString:@"PSSliderSpecifier"] ) {
-				v = [self create_UISliderWithDictionary:aSpecifier];
-			} else if( [PSType isEqualToString:@"BLColorPickerSpecifier"] ) {
-				v = [self create_LSColorDisplayWithDictionary:aSpecifier];
-			} else if( [PSType isEqualToString:@"PSTextFieldSpecifier"] ) {
-				v = [self create_UITextFieldWithDictionary:aSpecifier];
-			} else {
-				v = [self create_UILabelWithDictionary:aSpecifier];
-			}
-			
-			if( v != nil ) {
-				[theWidgets setObject:v forKey:PSKey];
-			}
-			
-			if( [PSType isEqualToString:@"BLURLButtonSpecifier"] ) {
-				[self precacheWebDisplayWithDictionary:aSpecifier];
-			}
-
-		
-		}
-	}
-
-	// and load in the values...
-	[self loadSettingsFromSystem];
-	readyForSaving = YES;
-	[pool release];
+    theDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    
+    if( theDictionary == nil ) {
+        NSLog( @"Error loading!" );
+        return;
+    }
+    NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
+    if( !preferenceSpecifiers ) {
+        [pool drain];
+        return;
+    }
+    
+    if( [preferenceSpecifiers count] == 0 ) {
+        [pool drain];
+        return;
+    }
+    self.valid = YES; // presumptuous, i admit
+    
+    // now, let's set up the precache web view list
+    if( theWebViews ) [theWebViews release];
+    theWebViews = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    // now, let's set up the widget list!
+    if( theWidgets ) [theWidgets release];
+    theWidgets = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    for( int x = 0 ; x < [preferenceSpecifiers count] ; x++ )
+    {
+        NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
+        NSString *PSType = [aSpecifier valueForKey:@"Type"];
+        NSString *PSKey = [aSpecifier valueForKey:@"Key"];
+        
+        if( PSKey && PSType ) {
+            id v;
+            if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
+                v = [self create_UISwitchWithDictionary:aSpecifier];
+            } else if( [PSType isEqualToString:@"BLSegmentedSpecifier"] ) {
+                v = [self create_UISegmentedControlWithDictionary:aSpecifier];
+            } else if( [PSType isEqualToString:@"PSSliderSpecifier"] ) {
+                v = [self create_UISliderWithDictionary:aSpecifier];
+            } else if( [PSType isEqualToString:@"BLColorPickerSpecifier"] ) {
+                v = [self create_LSColorDisplayWithDictionary:aSpecifier];
+            } else if( [PSType isEqualToString:@"PSTextFieldSpecifier"] ) {
+                v = [self create_UITextFieldWithDictionary:aSpecifier];
+            } else {
+                v = [self create_UILabelWithDictionary:aSpecifier];
+            }
+            
+            if( v != nil ) {
+                [theWidgets setObject:v forKey:PSKey];
+            }
+            
+            if( [PSType isEqualToString:@"BLURLButtonSpecifier"] ) {
+                [self precacheWebDisplayWithDictionary:aSpecifier];
+            }
+            
+            
+        }
+    }
+    
+    // and load in the values...
+    [self loadSettingsFromSystem];
+    readyForSaving = YES;
+    [pool drain];
 }
 
 - (int) indexOfSection:(int)sectno inSpecifierDictionary:(NSArray *)preferenceSpecifiers

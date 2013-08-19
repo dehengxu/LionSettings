@@ -48,8 +48,14 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 
 - (id) init;
 - (id) initWithPlist:(NSString *)plistName;
+
+//Load Settings.bundle/Root.plist
 - (void) loadHeirarchyFromDefaultPlist;
+//Load plist of main bundle.
 - (void) loadHeirarchyFromPlist:(NSString *)plistName;
+//Load plist at any path.
+- (void) loadHeirarchyFromPlistPath:(NSString *)plistPath;
+
 - (void) loadSettingsFromSystem;
 - (void) saveSettingsToSystem;
 - (void) saveColorSettingsToSystem;
