@@ -9,5 +9,4 @@ LlamaSettings-X based on LlamaSettings code.Add some features like:
 [LlamaSettings origin project](https://code.google.com/p/llamasettings/)
 
 
-####*Thanks to yorgle*####
-[His homepage](http://umlautllama.com/)
+Thanks to yorgle http://umlautllama.com/
