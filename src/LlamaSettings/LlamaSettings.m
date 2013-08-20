@@ -342,6 +342,28 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return [labelWidget autorelease];
 }
 
+- (UILabel *)create_PSMultiValuesWithDictionary:(NSDictionary *)dict
+{
+	CGRect frame = CGRectMake(0.0, 0.0, 150.0, kLabelHeight);
+    id defaultValue = [dict objectForKey:@"DefaultValue"];
+    NSArray *values = [dict objectForKey:@"Values"];
+    
+	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
+    labelWidget.textAlignment = NSTextAlignmentRight;
+	[labelWidget setBackgroundColor:[UIColor clearColor]];
+    
+    
+    id value = nil;
+    for (int i = 0; i < [values count]; i++) {
+        value = [values objectAtIndex:i];
+        if ([value isEqual:defaultValue]) {
+            labelWidget.text = [[dict objectForKey:@"Titles"] objectAtIndex:i];
+        }
+    }
+    
+    labelWidget.textColor = kSystemValueTextColor;
+    return [labelWidget autorelease];
+}
 
 - (void)precacheWebDisplayWithDictionary:(NSDictionary *)dict
 {
@@ -428,6 +450,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
                 v = [self create_UITextFieldWithDictionary:aSpecifier];
             }else if ([PSType isEqualToString:@"PSTitleValueSpecifier"]) {
                 v = [self create_PSTitleWithDictionary:aSpecifier];
+            }else if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
+                v = [self create_PSMultiValuesWithDictionary:aSpecifier];
             }else {
                 v = [self create_UILabelWithDictionary:aSpecifier];
             }
@@ -598,6 +622,29 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return nil;
 }
 
+- (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary
+{
+    NSArray *titles = [dictionary objectForKey:@"Titles"];
+    NSArray *values = [dictionary objectForKey:@"Values"];
+    if (!titles || !values) {
+        return nil;
+    }
+    
+    id _value = nil;
+    int i = 0;
+    for (_value in values) {
+        if ([_value isEqual:value]) {
+            break;
+        }
+        i++;
+    }
+    if (_value && i >= 0 && i < [titles count]) {
+        return [titles objectAtIndex:i];
+    }
+    
+    return nil;
+}
+
 
 #pragma mark -
 #pragma mark Loading and saving Settings to the System
@@ -606,14 +653,35 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
+    NSString *PSType = nil;
+    
 	//	for( id key in theWidgets ) //XXXXXX Dangerous!
 	NSArray *theKeys = [theWidgets allKeys];
 	for( id key in theKeys )
 	{
 		id widget = [theWidgets objectForKey:key];
 		id settingsValue = [defaults objectForKey:key];
+        NSDictionary *item = nil;
+        
+        NSLog(@"key :%@, sv :%@, class :%@", key, settingsValue, [widget classForCoder]);
 		if( settingsValue != nil ) {
+            //
+            for (item in preferences) {
+                if ([settingsValue isEqual:[item objectForKey:@"Key"]]) {
+                    PSType = [item objectForKey:@"Type"];
+                    break;
+                }
+                PSType = nil;
+                item = nil;
+            }
+            if ([widget isKindOfClass:[UILabel class]]) {
+                if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
+//                    ((UILabel*)widget).text = [self titleForValue:<#(id)#> inValues:<#(NSDictionary *)#>];//[item objectForKey:[defaults valueForKey:key]];
+                }else {
+                    ((UILabel*)widget).text = [defaults valueForKey:key];
+                }
+            }
 			if( [widget isKindOfClass:[UISwitch class]] ) {
 				((UISwitch*)widget).on = [defaults boolForKey:key];
 			}
@@ -822,11 +890,12 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSString * type = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Type"];
 	UIView * widg = [self widgetForRow:[indexPath row] inSection:[indexPath section]];
 
-	if(		[type isEqualToString:@"PSToggleSwitchSpecifier"]
-	   ||	[type isEqualToString:@"PSSliderSpecifier"]
-	   ||	[type isEqualToString:@"BLColorPickerSpecifier"]
-	   ||	[type isEqualToString:@"PSTitleValueSpecifier"]
-	   ||	[type isEqualToString:@"PSTextFieldSpecifier"] )
+	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
+	   || [type isEqualToString:@"PSSliderSpecifier"]
+	   || [type isEqualToString:@"BLColorPickerSpecifier"]
+	   || [type isEqualToString:@"PSTitleValueSpecifier"]
+	   || [type isEqualToString:@"PSTextFieldSpecifier"]
+       || [type isEqualToString:@"PSMultiValueSpecifier"])
 	{
 		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
@@ -836,6 +905,10 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		{
 	//		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 		}
+        if ([type isEqualToString:@"PSMultiValueSpecifier"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        }
+        
 	}
     
     if ([type isEqualToString:@"PSSliderSpecifier"]) {
@@ -948,6 +1021,12 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		[self pickNewColorForRow:[indexPath row] inSection:[indexPath section]];
 	}
 	 */
+    if ([type isEqualToString:@"PSMultiValueSpecifier"]) {
+        if (delegate && [delegate respondsToSelector:@selector(buttonPressed:inSettings:)]) {
+            [self.delegate buttonPressed:key inSettings:self];
+        }
+    }
+    
 	[pool release];
 }
 
