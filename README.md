@@ -1,4 +1,5 @@
-#* LlamaSettings iOS System settings compatitable framework *#
+##*LlamaSettings-X is a iOS System settings compatitable framework based on LlamaSettings project*##
 
-###*介绍*
-[LlamaSettings 原始地址](https://code.google.com/p/llamasettings/)
+###*Introduction*
+[LlamaSettings origin project](https://code.google.com/p/llamasettings/)
+
