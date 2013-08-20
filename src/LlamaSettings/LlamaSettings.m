@@ -653,7 +653,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         NSLog(@"notify :%@", notify);
     }
     
-    [self loadSettingsFromSystem];
+    [self performSelector:@selector(loadSettingsFromSystem) withObject:nil afterDelay:1.0f];
     if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
         [delegate userDefaultDidChanged];
     }
