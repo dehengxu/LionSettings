@@ -450,19 +450,53 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     [pool drain];
 }
 
+- (NSInteger)numberOfSectionsInSpecifierDictionary:(NSArray *)preferenceSpecifiers
+{
+	if( !preferenceSpecifiers ) return 0;
+	
+	int totalSect = 0;
+    
+    beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
+	for(int x = 0 ; x < [preferenceSpecifiers count]; x++)
+	{
+		NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
+		NSString *PSType = [aSpecifier valueForKey:@"Type"];
+		
+		if( [PSType isEqualToString:@"PSGroupSpecifier"] ){
+			totalSect++;
+		}
+	}
+    return totalSect + (beginWithOutGroupIdentifier ? 1 : 0);
+}
+
 - (int) indexOfSection:(int)sectno inSpecifierDictionary:(NSArray *)preferenceSpecifiers
 {
 	if( !preferenceSpecifiers ) return -1;
 	if( sectno < 0 ) return -1;
-	
+    
+    
 	int sect = 0;
+
+    beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
 	for( int x = 0 ; x < [preferenceSpecifiers count] ; x++ )
 	{
 		NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
 		NSString *PSType = [aSpecifier valueForKey:@"Type"];
 		
 		if( [PSType isEqualToString:@"PSGroupSpecifier"] ){
-			if( sectno == sect ) return x;
+//            NSLog(@"checking x :%d, sect :%d, sectno :%d, beginWithout :%d", x, sect, sectno, beginWithOutGroupIdentifier);
+            if (beginWithOutGroupIdentifier && sectno == 0) {
+//                NSLog(@"A index of section:(%d) %d", sectno, x);
+                return 0;
+            }
+            if (beginWithOutGroupIdentifier && sectno == sect + 1) {
+//                NSLog(@"B index of section:(%d) %d", sectno, x);
+                return x;
+            }
+			if( sectno == sect ) {
+//                NSLog(@"C index of section:(%d) %d", sectno, x);
+                return x;
+            }
 			sect++;
 		}
 	}
@@ -484,22 +518,41 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return nil;
 }
 
+- (BOOL)beginWithOutGroupSpecifier:(NSDictionary *)specifier
+{
+    return (![[specifier valueForKey:@"Type"] isEqualToString:@"PSGroupSpecifier"]);
+}
+
 
 - (NSObject *) itemAtRow:(int)row inSection:(int)section
 {
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
 	
+    beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
+    
 	// find the right section
 	int idx = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
+    
+    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
 	if( idx < 0 ) return nil;
 	
 	// advance to row items
 	idx++;
+    // compatibale first with out group identifier
+    if (beginWithOutGroupIdentifier && section == 0) {
+        idx --;
+    }
+    
+    
 	// advance to specified row item
 	idx += row;
+    
 	// range check
-	if( idx > [preferenceSpecifiers count] ) return nil;
-	
+	if( idx > [preferenceSpecifiers count] ){
+        return nil;
+    }
+    
+    NSLog(@"idx :%d\n", idx);
 	// okey, send it back!
 	return [preferenceSpecifiers objectAtIndex:idx];
 }
@@ -687,18 +740,24 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
 	
 	// find the right section
-	int section = 0;
-	while( [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers] >= 0 )	
-		section++;
-	return section;
+//	int section = 0;
+//	while( [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers] >= 0 )	
+//		section++;
+//	return section;
+    NSLog(@"number of sections :%d", [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers]);
+    return [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
 	
+    beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
 	// find the right section
 	int idx = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
+    if (beginWithOutGroupIdentifier && idx == 0) {
+        return @"";
+    }
 	
 	// not found?
 	if( idx == -1 ) return @"Bad Group Number";
@@ -711,18 +770,35 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
-	
+    beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
+    
+	NSLog(@"Section :%d, beginWithOutGroupIdentifier :%d;", section, beginWithOutGroupIdentifier);
+    
 	// find the right section
 	int idx1 = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
+//    NSLog(@"idx1 :%d", idx1);
 	if( idx1 < 0 ) return 0;
 	
 	// find the next section
 	int idx2 = [self indexOfSection:section+1 inSpecifierDictionary:preferenceSpecifiers];
+//    NSLog(@"idx2 :%d", idx2);
 	// return the difference
-	if( idx2 > 0 ) return (idx2 - idx1 - 1);
+	if( idx2 > 0 ) {
+        if (beginWithOutGroupIdentifier && idx1 == 0) {
+            NSLog(@"A numbers of section(%d) :%d", section, idx2 - idx1);
+            return idx2 - idx1;
+        }
+        NSLog(@"B numbers of section(%d) :%d", section, idx2 - idx1 - 1);
+        return (idx2 - idx1 - 1);
+    }
 	
 	// return the difference to the end, if there was no "next" section
-	return [preferenceSpecifiers count] - idx1-1;
+    if (beginWithOutGroupIdentifier && idx1 == 0) {
+        NSLog(@"C numbers of section(%d) :%d", section, [preferenceSpecifiers count]);
+        return [preferenceSpecifiers count];
+    }
+    NSLog(@"D numbers of section(%d) :%d", section, [preferenceSpecifiers count] - idx1 - 1);
+	return [preferenceSpecifiers count] - idx1 - 1;
 }
 
 #define kUIRowHeight 50.0
@@ -738,6 +814,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (UITableViewCell *) tableView:(UITableView *)tableView
 		  cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
 	UITableViewCell *cell; //= [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
 
 	//[self obtainTableCellForRow:row];
@@ -872,6 +949,25 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	}
 	 */
 	[pool release];
+}
+
+- (void)testCase
+{
+    NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
+    NSInteger testid = -1;
+    
+    NSLog(@"pre :%@\n\n\n\n", [preferenceSpecifiers classForCoder]);
+    
+    testid = [self indexOfSection:0 inSpecifierDictionary:preferenceSpecifiers];
+    NSLog(@"testid :%d", testid);
+    testid = [self indexOfSection:1 inSpecifierDictionary:preferenceSpecifiers];
+    NSLog(@"testid :%d", testid);
+    
+    testid = [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers];
+    NSLog(@"testid :%d", testid);
+    
+    
+    NSLog(@"\n\n\n\n");
 }
 
 @end

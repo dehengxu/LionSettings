@@ -34,7 +34,8 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 	
 	BOOL valid;
 	BOOL readyForSaving;
-	
+	BOOL beginWithOutGroupIdentifier;
+    
 	//NSAutoreleasePool *nsap;
 }
 
@@ -64,6 +65,8 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 - (void) disableItem:(NSString *) itemKey;
 
 - (void) receiveNotification:(id)notify;
+
+- (void)testCase;
 
 @end
 
