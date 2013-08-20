@@ -236,6 +236,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	tf.text = [dict objectForKey:@"DefaultValue"];
 	tf.secureTextEntry = [[dict objectForKey:@"IsSecure"] boolValue];
 	tf.delegate = self;
+    tf.textColor = kSystemValueTextColor;
 	
 	return tf;
 }
@@ -321,11 +322,22 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return sliderCtl;
 }
 
+- (UILabel *)create_PSTitleWithDictionary:(NSDictionary *)dict
+{
+	CGRect frame = CGRectMake(0.0, 0.0, 150.0, kLabelHeight);
+	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
+    labelWidget.textAlignment = NSTextAlignmentRight;
+	[labelWidget setBackgroundColor:[UIColor clearColor]];
+    labelWidget.text = [dict objectForKey:@"DefaultValue"];
+    labelWidget.textColor = kSystemValueTextColor;
+    return [labelWidget autorelease];
+}
+
 - (UILabel *)create_UILabelWithDictionary:(NSDictionary *)dict
 {
 	CGRect frame = CGRectMake(0.0, 0.0, 150.0, kLabelHeight);
 	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
-	labelWidget.textAlignment = UITextAlignmentRight;
+	labelWidget.textAlignment = NSTextAlignmentRight;
 	[labelWidget setBackgroundColor:[UIColor clearColor]];
 	return [labelWidget autorelease];
 }
@@ -406,15 +418,17 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             id v;
             if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
                 v = [self create_UISwitchWithDictionary:aSpecifier];
-            } else if( [PSType isEqualToString:@"BLSegmentedSpecifier"] ) {
+            }else if( [PSType isEqualToString:@"BLSegmentedSpecifier"] ) {
                 v = [self create_UISegmentedControlWithDictionary:aSpecifier];
-            } else if( [PSType isEqualToString:@"PSSliderSpecifier"] ) {
+            }else if( [PSType isEqualToString:@"PSSliderSpecifier"] ) {
                 v = [self create_UISliderWithDictionary:aSpecifier];
-            } else if( [PSType isEqualToString:@"BLColorPickerSpecifier"] ) {
+            }else if( [PSType isEqualToString:@"BLColorPickerSpecifier"] ) {
                 v = [self create_LSColorDisplayWithDictionary:aSpecifier];
-            } else if( [PSType isEqualToString:@"PSTextFieldSpecifier"] ) {
+            }else if( [PSType isEqualToString:@"PSTextFieldSpecifier"] ) {
                 v = [self create_UITextFieldWithDictionary:aSpecifier];
-            } else {
+            }else if ([PSType isEqualToString:@"PSTitleValueSpecifier"]) {
+                v = [self create_PSTitleWithDictionary:aSpecifier];
+            }else {
                 v = [self create_UILabelWithDictionary:aSpecifier];
             }
             
