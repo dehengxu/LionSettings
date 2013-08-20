@@ -45,9 +45,10 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	{
 		//nsap = [[NSAutoreleasePool alloc] init];
 		self.valid = NO;
-		
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+
 		[self loadHeirarchyFromPlist:plistName];
-	}	
+	}
 	return self;
 }
 
@@ -57,7 +58,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	{
 		//nsap = [[NSAutoreleasePool alloc] init];
 		self.valid = NO;
-		
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+        
 		[self loadHeirarchyFromDefaultPlist];
 	}	
 	return self;
@@ -71,7 +73,6 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		// get an object
 		_sharedLlamaSettings = [LlamaSettings alloc];
 		[_sharedLlamaSettings init];
-		
 	}
 	return _sharedLlamaSettings;
 }
@@ -90,6 +91,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void) dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
 	if( theDictionary ) [theDictionary release];
 	if( theWidgets ) [theWidgets release];
 	if( theWebViews ) [theWebViews release];
@@ -242,7 +244,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 {
 	[self saveColorSettingsToSystem];
 	[self autoEnableAndDisable];
-	[self.delegate settingsChanged:self];
+    if (delegate && [delegate respondsToSelector:@selector(settingsChanged:)]) {
+        [self.delegate settingsChanged:self];
+    }
 }
 
 
@@ -397,7 +401,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
         NSString *PSType = [aSpecifier valueForKey:@"Type"];
         NSString *PSKey = [aSpecifier valueForKey:@"Key"];
-        
+        NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
         if( PSKey && PSType ) {
             id v;
             if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
@@ -567,7 +571,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void) tellDelegateSettingsChanged
 {
-	[self.delegate settingsChanged:self];
+    if (delegate && [delegate respondsToSelector:@selector(settingsChanged:)]) {
+        [self.delegate settingsChanged:self];
+    }
 }
 
 - (void) saveSettingsToSystem_Actual
@@ -641,8 +647,17 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	[pool release];
 }
 
-
-
+- (void)receiveNotification:(NSNotification *)notify
+{
+    if (notify) {
+        NSLog(@"notify :%@", notify);
+    }
+    
+    [self loadSettingsFromSystem];
+    if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
+        [delegate userDefaultDidChanged];
+    }
+}
 
 #pragma mark -
 #pragma mark UITableViewDelegate, UITableViewDataSource methods 
@@ -733,13 +748,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	}
     
     if ([type isEqualToString:@"PSSliderSpecifier"]) {
-//		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
-//		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
-//		((DisplayCell *)cell).view = widg;
         cell = [[[SliderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:0] autorelease];
         UISlider *_slider = (UISlider *)widg;
         ((SliderCell *)cell).slider = _slider;
-        
     }
 
 	if( [type isEqualToString:@"BLVolumeSpecifier"] )
@@ -826,7 +837,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSString * webTitle = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"WebTitle" orFallBackOnProperty:@"Title"]; 
 	NSString * type = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Type"];
 	NSString * key = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Key"];
-	if( [type isEqualToString:@"BLFullButtonSpecifier"] ) [self.delegate buttonPressed:key inSettings:self];
+	if( [type isEqualToString:@"BLFullButtonSpecifier"] ) {
+        if (delegate && [delegate respondsToSelector:@selector(buttonPressed:inSettings:)]) {
+            [self.delegate buttonPressed:key inSettings:self];
+        }
+    }
 	if( [type isEqualToString:@"BLURLButtonSpecifier"] ) {
 		BOOL Preload = [self boolForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Preload"];
 		BOOL ExternalLaunch = [self boolForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"ExternalLaunch"];

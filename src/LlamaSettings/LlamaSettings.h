@@ -63,10 +63,13 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 - (void) enableItem:(NSString *) itemKey;
 - (void) disableItem:(NSString *) itemKey;
 
+- (void) receiveNotification:(id)notify;
+
 @end
 
 // and our callback delegate
 @protocol LlamaSettingsDelegate<NSObject>
 - (void) settingsChanged:(LlamaSettings *)ls;
 - (void) buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls;
+- (void) userDefaultDidChanged;
 @end

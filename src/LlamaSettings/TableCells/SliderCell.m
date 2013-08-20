@@ -30,7 +30,7 @@ NSString *kSliderCell_ID = @"SliderCell_ID";
             [_slider release];
         }
         _slider = [slider retain];
-        [self addSubview:_slider];
+        [self.contentView addSubview:_slider];
     }
 }
 
