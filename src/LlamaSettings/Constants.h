@@ -48,3 +48,8 @@
 // table view cell content offsets
 #define kCellLeftOffset			8.0
 #define kCellTopOffset			12.0
+
+// System default text color
+#define kSystemValueTextColor    [UIColor colorWithRed:50/255.0 green:79/255.0 blue:133/255.0 alpha:1.0]
+#define kSystemTitleTextColor    [UIColor blackColor]
+
