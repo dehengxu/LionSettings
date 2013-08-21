@@ -3,8 +3,11 @@
 
 ####*Introduction*####
 LionSettings based on LlamaSettings code.Add some features like:
+  
   Support system "Settings.bundles" file.
+  
   Also support your own settings.bundls.
+  
   Auto reload settings after system settings changed.
   
 [LlamaSettings origin project](https://code.google.com/p/llamasettings/)
