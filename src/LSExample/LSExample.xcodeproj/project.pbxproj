@@ -42,7 +42,79 @@
 		7420AA3417C51F4200776F9B /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; };
 		7420AA3517C51F4200776F9B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; };
 		7420AA3717C51F7F00776F9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7420AA3617C51F7F00776F9B /* Settings.bundle */; };
+		74732C3C17C5222F006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74732C4017C5222F006747C7 /* LionSettingsLibrary.h */; };
+		74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C4217C5222F006747C7 /* LionSettingsLibrary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C4A17C52230006747C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C4917C52230006747C7 /* XCTest.framework */; };
+		74732C4B17C52230006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		74732C4C17C52230006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		74732C4F17C52230006747C7 /* libLionSettingsLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */; };
+		74732C5517C52230006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C5317C52230006747C7 /* InfoPlist.strings */; };
+		74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */; };
+		74732C6617C52250006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C6A17C52250006747C7 /* InfoPlist.strings */; };
+		74732C7117C52268006747C7 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0317C51F4200776F9B /* ColorHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7217C52268006747C7 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7317C52268006747C7 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0717C51F4200776F9B /* LionSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7417C52268006747C7 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0917C51F4200776F9B /* LlamaSettings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7517C52268006747C7 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0D17C51F4200776F9B /* ButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7617C52268006747C7 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0F17C51F4200776F9B /* CellFullWide.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7717C52268006747C7 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1117C51F4200776F9B /* CellTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7817C52268006747C7 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1317C51F4200776F9B /* CellTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7917C52268006747C7 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1517C51F4200776F9B /* DisplayCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7A17C52268006747C7 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1717C51F4200776F9B /* EditableTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7B17C52268006747C7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1917C51F4200776F9B /* SliderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7C17C52268006747C7 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1B17C51F4200776F9B /* SourceCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7D17C52268006747C7 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7E17C52268006747C7 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2017C51F4200776F9B /* ColorTouchPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C7F17C52268006747C7 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C8017C52268006747C7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74732C8117C5227F006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
+		74732C8217C52283006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		74732C8317C52289006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
+		74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		74732C8717C522C6006747C7 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0317C51F4200776F9B /* ColorHelper.m */; };
+		74732C8817C522C6006747C7 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */; };
+		74732C8917C522C6006747C7 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0717C51F4200776F9B /* LionSettingsViewController.m */; };
+		74732C8A17C522C6006747C7 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0917C51F4200776F9B /* LlamaSettings.m */; };
+		74732C8B17C522C6006747C7 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0D17C51F4200776F9B /* ButtonCell.m */; };
+		74732C8C17C522C6006747C7 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0F17C51F4200776F9B /* CellFullWide.m */; };
+		74732C8D17C522C6006747C7 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1117C51F4200776F9B /* CellTextField.m */; };
+		74732C8E17C522C6006747C7 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1317C51F4200776F9B /* CellTextView.m */; };
+		74732C8F17C522C6006747C7 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1517C51F4200776F9B /* DisplayCell.m */; };
+		74732C9017C522C6006747C7 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1717C51F4200776F9B /* EditableTableViewCell.m */; };
+		74732C9117C522C6006747C7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1917C51F4200776F9B /* SliderCell.m */; };
+		74732C9217C522C6006747C7 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1B17C51F4200776F9B /* SourceCell.m */; };
+		74732C9317C522C6006747C7 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */; };
+		74732C9417C522C6006747C7 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2017C51F4200776F9B /* ColorTouchPicker.m */; };
+		74732C9517C522C6006747C7 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; };
+		74732C9617C522C6006747C7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74732C4D17C52230006747C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74732C3A17C5222F006747C7;
+			remoteInfo = LionSettingsLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74732C3917C5222F006747C7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +177,18 @@
 		7420AA2317C51F4200776F9B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7420AA2417C51F4200776F9B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		7420AA3617C51F7F00776F9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLionSettingsLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74732C3F17C5222F006747C7 /* LionSettingsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettingsLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		74732C4017C5222F006747C7 /* LionSettingsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionSettingsLibrary.h; sourceTree = "<group>"; };
+		74732C4217C5222F006747C7 /* LionSettingsLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionSettingsLibrary.m; sourceTree = "<group>"; };
+		74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionSettingsLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74732C4917C52230006747C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		74732C5217C52230006747C7 /* LionSettingsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettingsLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		74732C5417C52230006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionSettingsLibraryTests.m; sourceTree = "<group>"; };
+		74732C6917C52250006747C7 /* LionSettings-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettings-Info.plist"; sourceTree = "<group>"; };
+		74732C6B17C52250006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettings-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +201,39 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
 				5E2FCF630FC3B70500A1E9EF /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C3817C5222F006747C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C8317C52289006747C7 /* UIKit.framework in Frameworks */,
+				74732C8217C52283006747C7 /* CoreGraphics.framework in Frameworks */,
+				74732C8117C5227F006747C7 /* MediaPlayer.framework in Frameworks */,
+				74732C3C17C5222F006747C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C4517C52230006747C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C4A17C52230006747C7 /* XCTest.framework in Frameworks */,
+				74732C4C17C52230006747C7 /* UIKit.framework in Frameworks */,
+				74732C4F17C52230006747C7 /* libLionSettingsLibrary.a in Frameworks */,
+				74732C4B17C52230006747C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C6017C52250006747C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */,
+				74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */,
+				74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */,
+				74732C6617C52250006747C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* LSExample.app */,
+				74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */,
+				74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +293,9 @@
 				080E96DDFE201D6D7F000001 /* Application Controllers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				74732C3D17C5222F006747C7 /* LionSettingsLibrary */,
+				74732C5017C52230006747C7 /* LionSettingsLibraryTests */,
+				74732C6717C52250006747C7 /* LionSettings */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -205,6 +327,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765580DF743DE002DB57D /* CoreGraphics.framework */,
+				74732C4917C52230006747C7 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -297,7 +420,71 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		74732C3D17C5222F006747C7 /* LionSettingsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				74732C4017C5222F006747C7 /* LionSettingsLibrary.h */,
+				74732C4217C5222F006747C7 /* LionSettingsLibrary.m */,
+				74732C3E17C5222F006747C7 /* Supporting Files */,
+			);
+			path = LionSettingsLibrary;
+			sourceTree = "<group>";
+		};
+		74732C3E17C5222F006747C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74732C3F17C5222F006747C7 /* LionSettingsLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74732C5017C52230006747C7 /* LionSettingsLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */,
+				74732C5117C52230006747C7 /* Supporting Files */,
+			);
+			path = LionSettingsLibraryTests;
+			sourceTree = "<group>";
+		};
+		74732C5117C52230006747C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74732C5217C52230006747C7 /* LionSettingsLibraryTests-Info.plist */,
+				74732C5317C52230006747C7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74732C6717C52250006747C7 /* LionSettings */ = {
+			isa = PBXGroup;
+			children = (
+				74732C6817C52250006747C7 /* Supporting Files */,
+			);
+			path = LionSettings;
+			sourceTree = "<group>";
+		};
+		74732C6817C52250006747C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74732C6917C52250006747C7 /* LionSettings-Info.plist */,
+				74732C6A17C52250006747C7 /* InfoPlist.strings */,
+				74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74732C6117C52250006747C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1D6058900D05DD3D006BFB54 /* LSExample */ = {
@@ -317,12 +504,73 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* LSExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		74732C3A17C5222F006747C7 /* LionSettingsLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74732C5817C52230006747C7 /* Build configuration list for PBXNativeTarget "LionSettingsLibrary" */;
+			buildPhases = (
+				74732C3717C5222F006747C7 /* Sources */,
+				74732C3817C5222F006747C7 /* Frameworks */,
+				74732C3917C5222F006747C7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LionSettingsLibrary;
+			productName = LionSettingsLibrary;
+			productReference = 74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74732C4717C52230006747C7 /* LionSettingsLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74732C5B17C52230006747C7 /* Build configuration list for PBXNativeTarget "LionSettingsLibraryTests" */;
+			buildPhases = (
+				74732C4417C52230006747C7 /* Sources */,
+				74732C4517C52230006747C7 /* Frameworks */,
+				74732C4617C52230006747C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74732C4E17C52230006747C7 /* PBXTargetDependency */,
+			);
+			name = LionSettingsLibraryTests;
+			productName = LionSettingsLibraryTests;
+			productReference = 74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		74732C6517C52250006747C7 /* LionSettings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74732C6E17C52250006747C7 /* Build configuration list for PBXNativeTarget "LionSettings" */;
+			buildPhases = (
+				74732C5E17C52250006747C7 /* ShellScript */,
+				74732C5F17C52250006747C7 /* Sources */,
+				74732C6017C52250006747C7 /* Frameworks */,
+				74732C6117C52250006747C7 /* Headers */,
+				74732C6217C52250006747C7 /* Resources */,
+				74732C6317C52250006747C7 /* ShellScript */,
+				74732C6417C52250006747C7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LionSettings;
+			productName = LionSettings;
+			productType = "com.apple.product-type.framework.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				ORGANIZATIONNAME = Deheng.Xu;
+				TargetAttributes = {
+					74732C4717C52230006747C7 = {
+						TestTargetID = 1D6058900D05DD3D006BFB54;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LSExample" */;
 			compatibilityVersion = "Xcode 3.1";
@@ -340,6 +588,9 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* LSExample */,
+				74732C3A17C5222F006747C7 /* LionSettingsLibrary */,
+				74732C4717C52230006747C7 /* LionSettingsLibraryTests */,
+				74732C6517C52250006747C7 /* LionSettings */,
 			);
 		};
 /* End PBXProject section */
@@ -360,7 +611,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74732C4617C52230006747C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C5517C52230006747C7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C6217C52250006747C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74732C5E17C52250006747C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		74732C6317C52250006747C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		74732C6417C52250006747C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -393,7 +702,89 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74732C3717C5222F006747C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C7117C52268006747C7 /* ColorHelper.m in Sources */,
+				74732C7217C52268006747C7 /* LionMultiValuesViewController.m in Sources */,
+				74732C7317C52268006747C7 /* LionSettingsViewController.m in Sources */,
+				74732C7417C52268006747C7 /* LlamaSettings.m in Sources */,
+				74732C7517C52268006747C7 /* ButtonCell.m in Sources */,
+				74732C7617C52268006747C7 /* CellFullWide.m in Sources */,
+				74732C7717C52268006747C7 /* CellTextField.m in Sources */,
+				74732C7817C52268006747C7 /* CellTextView.m in Sources */,
+				74732C7917C52268006747C7 /* DisplayCell.m in Sources */,
+				74732C7A17C52268006747C7 /* EditableTableViewCell.m in Sources */,
+				74732C7B17C52268006747C7 /* SliderCell.m in Sources */,
+				74732C7C17C52268006747C7 /* SourceCell.m in Sources */,
+				74732C7D17C52268006747C7 /* ColorBoxPicker.m in Sources */,
+				74732C7E17C52268006747C7 /* ColorTouchPicker.m in Sources */,
+				74732C7F17C52268006747C7 /* LSColorDisplay.m in Sources */,
+				74732C8017C52268006747C7 /* WebViewController.m in Sources */,
+				74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C4417C52230006747C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74732C5F17C52250006747C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74732C8717C522C6006747C7 /* ColorHelper.m in Sources */,
+				74732C8817C522C6006747C7 /* LionMultiValuesViewController.m in Sources */,
+				74732C8917C522C6006747C7 /* LionSettingsViewController.m in Sources */,
+				74732C8A17C522C6006747C7 /* LlamaSettings.m in Sources */,
+				74732C8B17C522C6006747C7 /* ButtonCell.m in Sources */,
+				74732C8C17C522C6006747C7 /* CellFullWide.m in Sources */,
+				74732C8D17C522C6006747C7 /* CellTextField.m in Sources */,
+				74732C8E17C522C6006747C7 /* CellTextView.m in Sources */,
+				74732C8F17C522C6006747C7 /* DisplayCell.m in Sources */,
+				74732C9017C522C6006747C7 /* EditableTableViewCell.m in Sources */,
+				74732C9117C522C6006747C7 /* SliderCell.m in Sources */,
+				74732C9217C522C6006747C7 /* SourceCell.m in Sources */,
+				74732C9317C522C6006747C7 /* ColorBoxPicker.m in Sources */,
+				74732C9417C522C6006747C7 /* ColorTouchPicker.m in Sources */,
+				74732C9517C522C6006747C7 /* LSColorDisplay.m in Sources */,
+				74732C9617C522C6006747C7 /* WebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74732C4E17C52230006747C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74732C3A17C5222F006747C7 /* LionSettingsLibrary */;
+			targetProxy = 74732C4D17C52230006747C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74732C5317C52230006747C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74732C5417C52230006747C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74732C6A17C52250006747C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74732C6B17C52250006747C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -419,6 +810,257 @@
 				GCC_PREFIX_HEADER = LSExample_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = LSExample;
+			};
+			name = Release;
+		};
+		74732C5917C52230006747C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/LionSettingsLibrary.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettingsLibrary/LionSettingsLibrary-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		74732C5A17C52230006747C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/LionSettingsLibrary.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettingsLibrary/LionSettingsLibrary-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74732C5C17C52230006747C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LSExample.app/LSExample";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettingsLibrary/LionSettingsLibrary-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "LionSettingsLibraryTests/LionSettingsLibraryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		74732C5D17C52230006747C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LSExample.app/LSExample";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettingsLibrary/LionSettingsLibrary-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "LionSettingsLibraryTests/LionSettingsLibraryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		74732C6F17C52250006747C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettings/LionSettings-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "LionSettings/LionSettings-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		74732C7017C52250006747C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LionSettings/LionSettings-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "LionSettings/LionSettings-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -460,6 +1102,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		74732C5817C52230006747C7 /* Build configuration list for PBXNativeTarget "LionSettingsLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74732C5917C52230006747C7 /* Debug */,
+				74732C5A17C52230006747C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74732C5B17C52230006747C7 /* Build configuration list for PBXNativeTarget "LionSettingsLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74732C5C17C52230006747C7 /* Debug */,
+				74732C5D17C52230006747C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74732C6E17C52250006747C7 /* Build configuration list for PBXNativeTarget "LionSettings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74732C6F17C52250006747C7 /* Debug */,
+				74732C7017C52250006747C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LSExample" */ = {
 			isa = XCConfigurationList;
