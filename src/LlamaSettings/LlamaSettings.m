@@ -65,13 +65,13 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return self;
 }
 
-- (id)initWithSettingsBundle:(NSString *)bundleName
+- (id)initWithSettingsBundle:(NSString *)bundleName andPlistName:(NSString *)plistName
 {
     if (self = [super init]) {
         self.valid = NO;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
         
-		[self loadHeirarchyFromSettingsBundle:bundleName];
+		[self loadHeirarchyFromSettingsBundle:bundleName andPlistName:plistName];
     }
     return self;
 }
@@ -538,13 +538,13 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void)loadHeirarchyFromDefaultSettingsBundle
 {
-    [self loadHeirarchyFromSettingsBundle:@"Settings.bundle"];
+    [self loadHeirarchyFromSettingsBundle:@"Settings.bundle" andPlistName:@"Root.plist"];
 }
 
-- (void)loadHeirarchyFromSettingsBundle:(NSString *)bundleName
+- (void)loadHeirarchyFromSettingsBundle:(NSString *)bundleName andPlistName:(NSString *)plistName
 {
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:nil];
-    [self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/Root.plist", bundlePath]];
+    [self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/%@", bundlePath, plistName]];
 }
 
 - (NSInteger)numberOfSectionsInSpecifierDictionary:(NSArray *)preferenceSpecifiers
@@ -704,7 +704,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
+    //NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
     NSString *PSType = nil;
     
 	//	for( id key in theWidgets ) //XXXXXX Dangerous!

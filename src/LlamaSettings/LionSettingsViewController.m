@@ -17,11 +17,16 @@
 
 @implementation LionSettingsViewController
 
-- (id)initWithSettingsBundleName:(NSString *)bundleName
+- (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName
 {
     self = [self initWithNibName:nil bundle:nil];
     if (self) {
         _bundleName = [bundleName copy];
+        if (!plistName) {
+            _fileName = @"Root.plist";
+        }else {
+            _fileName = [plistName copy];
+        }
     }
     return self;
 }
@@ -53,7 +58,7 @@
 {
     if (_ls == nil) {
         if (_bundleName) {
-            _ls = [[LlamaSettings alloc] initWithSettingsBundle:_bundleName];
+            _ls = [[LlamaSettings alloc] initWithSettingsBundle:_bundleName andPlistName:_fileName];
         }else {
             _ls = [[LlamaSettings alloc] init];
         }
@@ -90,12 +95,17 @@
 {
     //
     NSDictionary *element = [ls preferenceSpecifiersElementForKey:buttonKey];
-
-    if ([[ls PSTypeOfSettingsElement:element] isEqualToString:@"PSMultiValueSpecifier"]) {
+    NSString *PSType = [ls PSTypeOfSettingsElement:element];
+    
+    if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
         //Push to multi values view.
         LionMultiValuesViewController *lmvvc = [[LionMultiValuesViewController alloc] init];
         lmvvc.settingsElement = element;
         [self.navigationController pushViewController:lmvvc animated:YES];
+    }
+    
+    if ([PSType isEqualToString:@"PSChildPaneSpecifier"]) {
+        
     }
 }
 

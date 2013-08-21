@@ -16,12 +16,12 @@
 {
 @private
     NSString *_bundleName;
-    
+    NSString *_fileName;
 }
 
 @property (nonatomic, retain) LlamaSettings *ls;
 @property (nonatomic, retain) UITableView *tableView;
 
-- (id)initWithSettingsBundleName:(NSString *)bundleName;
+- (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName;
 
 @end
