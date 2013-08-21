@@ -452,32 +452,57 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         NSDictionary * aSpecifier = [preferenceSpecifiersCopy objectAtIndex:x];
         NSString *PSType = [aSpecifier valueForKey:@"Type"];
         NSString *PSKey = [aSpecifier valueForKey:@"Key"];
-        //NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
+//        NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
+        
+        if (!PSType) {
+            [illegaleSpecifiers addObject:aSpecifier];
+            continue;
+        }
+        
+        if (![PSType isEqualToString:@"PSGroupSpecifier"] && ![PSType isEqualToString:@"PSChildPaneSpecifier"] && !PSKey) {
+            [illegaleSpecifiers addObject:aSpecifier];
+            continue;
+        }
         
         if( PSKey && PSType ) {
-            id v;
+            id v = nil;
             if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
-                v = [self create_UISwitchWithDictionary:aSpecifier];
+                if (![aSpecifier valueForKey:@"DefaultValue"] ||
+                    ![aSpecifier valueForKey:@"Title"]) {
+                    [illegaleSpecifiers addObject:aSpecifier];
+                }else {
+                    v = [self create_UISwitchWithDictionary:aSpecifier];
+                }
             }else if( [PSType isEqualToString:@"BLSegmentedSpecifier"] ) {
                 v = [self create_UISegmentedControlWithDictionary:aSpecifier];
             }else if( [PSType isEqualToString:@"PSSliderSpecifier"] ) {
+                if (![aSpecifier valueForKey:@"DefaultValue"] ||
+                    ![aSpecifier valueForKey:@"MinimumValue"] ||
+                    ![aSpecifier valueForKey:@"MaximumValue"]) {
+                    [illegaleSpecifiers addObject:aSpecifier];
+                }
+                
                 v = [self create_UISliderWithDictionary:aSpecifier];
             }else if( [PSType isEqualToString:@"BLColorPickerSpecifier"] ) {
                 v = [self create_LSColorDisplayWithDictionary:aSpecifier];
             }else if( [PSType isEqualToString:@"PSTextFieldSpecifier"] ) {
                 v = [self create_UITextFieldWithDictionary:aSpecifier];
             }else if ([PSType isEqualToString:@"PSTitleValueSpecifier"]) {
-                v = [self create_PSTitleWithDictionary:aSpecifier];
+                if (![aSpecifier valueForKey:@"DefaultValue"]) {
+                    [illegaleSpecifiers addObject:aSpecifier];
+                }else {
+                    v = [self create_PSTitleWithDictionary:aSpecifier];
+                }
             }else if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
                 if (![aSpecifier valueForKey:@"Titles"] ||
                     ![aSpecifier valueForKey:@"Values"] ||
                     ([[aSpecifier valueForKey:@"Titles"] count] != [[aSpecifier valueForKey:@"Values"] count])) {
                     [illegaleSpecifiers addObject:aSpecifier];
-                    v = nil;
                 }else {
                     v = [self create_PSMultiValuesWithDictionary:aSpecifier];
                 }
             }else {
+//                NSLog(@"PSType :%@", PSType);
                 v = [self create_UILabelWithDictionary:aSpecifier];
             }
             
@@ -605,7 +630,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	// find the right section
 	int idx = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
     
-//    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
+    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
     
 	if( idx < 0 ) return nil;
 	
@@ -634,7 +659,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (NSString *) titleOfRow:(int)row inSection:(int)section
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
-	return [aSpecifier valueForKey:@"Title"];
+ 	return [aSpecifier valueForKey:@"Title"];
 }
 
 - (NSString *) propertyForRow:(int)row inSection:(int)section ofProperty:(NSString *)property
@@ -911,7 +936,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	NSString * type = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Type"];
 	UIView * widg = [self widgetForRow:[indexPath row] inSection:[indexPath section]];
-
+    NSLog(@"%s type :%@, (%d, %d)", __func__, type, indexPath.row, indexPath.section);
+    
 	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
 	   || [type isEqualToString:@"PSSliderSpecifier"]
 	   || [type isEqualToString:@"BLColorPickerSpecifier"]
@@ -925,13 +951,19 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		
 		if( [type isEqualToString:@"BLColorPickerSpecifier"] )
 		{
-	//		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+            //cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 		}
         if ([type isEqualToString:@"PSMultiValueSpecifier"]) {
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         }
         
 	}
+    
+    if ([type isEqualToString:@"PSChildPaneSpecifier"]) {
+		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    }
     
     if ([type isEqualToString:@"PSSliderSpecifier"]) {
         cell = [[[SliderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:0] autorelease];
@@ -954,14 +986,14 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		((CellFullWide *)cell).view = widg;	
 	}
 	
-	if(	  [type isEqualToString:@"BLFullButtonSpecifier"]
-	   || [type isEqualToString:@"BLURLButtonSpecifier"] )
+	if([type isEqualToString:@"BLFullButtonSpecifier"]
+	   || [type isEqualToString:@"BLURLButtonSpecifier"])
 	{
 		cell = [[[ButtonCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
 		((ButtonCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		[(ButtonCell *)cell layoutSubviews];
 	}
-	
+    
 	return cell;
 }
 
