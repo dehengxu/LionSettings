@@ -65,6 +65,17 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return self;
 }
 
+- (id)initWithSettingsBundle:(NSString *)bundleName
+{
+    if (self = [super init]) {
+        self.valid = NO;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+        
+		[self loadHeirarchyFromSettingsBundle:bundleName];
+    }
+    return self;
+}
+
 
 + (LlamaSettings *)sharedSettings
 {
@@ -389,8 +400,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void) loadHeirarchyFromDefaultPlist
 {
-    NSString *settingsBundlePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
-	[self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/Root.plist", settingsBundlePath]];
+//    NSString *settingsBundlePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+//	[self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/Root.plist", settingsBundlePath]];
+    [self loadHeirarchyFromDefaultSettingsBundle];
 }
 
 - (void) loadHeirarchyFromPlist:(NSString *)plistName
@@ -412,12 +424,16 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         return;
     }
     NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
+    NSMutableArray *preferenceSpecifiersCopy = [[preferenceSpecifiers mutableCopy] autorelease];
+    //Collection of illegale specifiers.
+    NSMutableArray *illegaleSpecifiers = [NSMutableArray array];
+    
     if( !preferenceSpecifiers ) {
         [pool drain];
         return;
     }
     
-    if( [preferenceSpecifiers count] == 0 ) {
+    if( [preferenceSpecifiersCopy count] == 0 ) {
         [pool drain];
         return;
     }
@@ -431,9 +447,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     if( theWidgets ) [theWidgets release];
     theWidgets = [[NSMutableDictionary alloc] initWithCapacity:1];
     
-    for( int x = 0 ; x < [preferenceSpecifiers count] ; x++ )
+    for( int x = 0 ; x < [preferenceSpecifiersCopy count] ; x++ )
     {
-        NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
+        NSDictionary * aSpecifier = [preferenceSpecifiersCopy objectAtIndex:x];
         NSString *PSType = [aSpecifier valueForKey:@"Type"];
         NSString *PSKey = [aSpecifier valueForKey:@"Key"];
         //NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
@@ -453,7 +469,14 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             }else if ([PSType isEqualToString:@"PSTitleValueSpecifier"]) {
                 v = [self create_PSTitleWithDictionary:aSpecifier];
             }else if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
-                v = [self create_PSMultiValuesWithDictionary:aSpecifier];
+                if (![aSpecifier valueForKey:@"Titles"] ||
+                    ![aSpecifier valueForKey:@"Values"] ||
+                    ([[aSpecifier valueForKey:@"Titles"] count] != [[aSpecifier valueForKey:@"Values"] count])) {
+                    [illegaleSpecifiers addObject:aSpecifier];
+                    v = nil;
+                }else {
+                    v = [self create_PSMultiValuesWithDictionary:aSpecifier];
+                }
             }else {
                 v = [self create_UILabelWithDictionary:aSpecifier];
             }
@@ -470,10 +493,33 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         }
     }
     
+    if (illegaleSpecifiers.count) {
+        [preferenceSpecifiersCopy removeObjectsInArray:illegaleSpecifiers];
+        NSMutableDictionary *tmp = [theDictionary mutableCopy];
+        [tmp setValue:preferenceSpecifiersCopy forKey:@"PreferenceSpecifiers"];
+        
+        if (theDictionary) {
+            [theDictionary release];
+        }
+        
+        theDictionary = tmp;
+    }
+    
     // and load in the values...
     [self loadSettingsFromSystem];
     readyForSaving = YES;
     [pool drain];
+}
+
+- (void)loadHeirarchyFromDefaultSettingsBundle
+{
+    [self loadHeirarchyFromSettingsBundle:@"Settings.bundle"];
+}
+
+- (void)loadHeirarchyFromSettingsBundle:(NSString *)bundleName
+{
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:nil];
+    [self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/Root.plist", bundlePath]];
 }
 
 - (NSInteger)numberOfSectionsInSpecifierDictionary:(NSArray *)preferenceSpecifiers
@@ -623,51 +669,6 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 	if( key ) return [theWidgets objectForKey:key];
 	return nil;
-}
-
-/**
- Return title for the value if which exist in values titles paire of the settings element or value self.
- */
-- (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary
-{
-    NSArray *titles = [dictionary objectForKey:@"Titles"];
-    NSArray *values = [dictionary objectForKey:@"Values"];
-    if (!titles || !values) {
-        return value;
-    }
-    
-    id _value = nil;
-    int i = 0;
-    for (_value in values) {
-        if ([_value isEqual:value]) {
-            break;
-        }
-        i++;
-    }
-    if (_value && i >= 0 && i < [titles count]) {
-        return [titles objectAtIndex:i];
-    }
-    
-    return value;
-}
-
-- (NSString *)PSTypeOfSettingsElement:(NSDictionary *)dict
-{
-    return [dict objectForKey:@"Type"];
-}
-
-/**
- Return an element from 
- */
-- (NSDictionary *)preferenceSpecifiersElementForKey:(NSString *)key
-{
-    NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
-    for (NSDictionary *element in preferences) {
-        if ([[element valueForKey:@"Key"] isEqualToString:key]) {
-            return element;
-        }
-    }
-    return nil;
 }
 
 #pragma mark -
@@ -1050,6 +1051,55 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     
 	[pool release];
 }
+
+#pragma mark - Extended
+
+/**
+ Return title for the value if which exist in values titles paire of the settings element or value self.
+ */
+- (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary
+{
+    NSArray *titles = [dictionary objectForKey:@"Titles"];
+    NSArray *values = [dictionary objectForKey:@"Values"];
+    if (!titles || !values) {
+        return value;
+    }
+    
+    id _value = nil;
+    int i = 0;
+    for (_value in values) {
+        if ([_value isEqual:value]) {
+            break;
+        }
+        i++;
+    }
+    if (_value && i >= 0 && i < [titles count]) {
+        return [titles objectAtIndex:i];
+    }
+    
+    return value;
+}
+
+- (NSString *)PSTypeOfSettingsElement:(NSDictionary *)dict
+{
+    return [dict objectForKey:@"Type"];
+}
+
+/**
+ Return an element from
+ */
+- (NSDictionary *)preferenceSpecifiersElementForKey:(NSString *)key
+{
+    NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
+    for (NSDictionary *element in preferences) {
+        if ([[element valueForKey:@"Key"] isEqualToString:key]) {
+            return element;
+        }
+    }
+    return nil;
+}
+
+#pragma mark - testing
 
 - (void)testCase
 {

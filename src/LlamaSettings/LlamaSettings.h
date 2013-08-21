@@ -49,6 +49,7 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 
 - (id) init;
 - (id) initWithPlist:(NSString *)plistName;
+- (id) initWithSettingsBundle:(NSString *)bundleName;
 
 //Load Settings.bundle/Root.plist
 - (void) loadHeirarchyFromDefaultPlist;
@@ -56,6 +57,10 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 - (void) loadHeirarchyFromPlist:(NSString *)plistName;
 //Load plist at any path.
 - (void) loadHeirarchyFromPlistPath:(NSString *)plistPath;
+//Load plist at default settings bundle
+- (void) loadHeirarchyFromDefaultSettingsBundle;
+//Load plist at specified settings bundle
+- (void) loadHeirarchyFromSettingsBundle:(NSString *)bundleName;
 
 - (void) loadSettingsFromSystem;
 - (void) saveSettingsToSystem;
@@ -65,6 +70,12 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 - (void) disableItem:(NSString *) itemKey;
 
 - (void) receiveNotification:(id)notify;
+
+#pragma mark - Extended
+
+- (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary;
+- (NSString *)PSTypeOfSettingsElement:(NSDictionary *)dict;
+- (NSDictionary *)preferenceSpecifiersElementForKey:(NSString *)key;
 
 - (void)testCase;
 

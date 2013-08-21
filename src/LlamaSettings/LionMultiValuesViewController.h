@@ -1,13 +1,18 @@
 //
-//  LSMultiValuesViewController.h
-//  LRSettings
+//  LionMultiValuesViewController.h
+//  
 //
 //  Created by Deheng.Xu on 13-8-21.
-//  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
+//  Copyright (c) 2013年 Deheng.Xu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LSMultiValuesViewController : UIViewController
+#import "LlamaSettings.h"
+
+@interface LionMultiValuesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain) NSDictionary *settingsElement;
+@property (nonatomic, retain) LlamaSettings *ls;
+@property (nonatomic, retain) UITableView *tableView;
 
 @end

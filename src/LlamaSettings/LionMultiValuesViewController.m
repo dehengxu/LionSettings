@@ -1,18 +1,18 @@
 //
-//  LSMultiValuesViewController.m
-//  LRSettings
+//  LionMultiValuesViewController.m
+//
 //
 //  Created by Deheng.Xu on 13-8-21.
-//  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
+//  Copyright (c) 2013年 Deheng.Xu. All rights reserved.
 //
 
-#import "LSMultiValuesViewController.h"
+#import "LionMultiValuesViewController.h"
 
-@interface LSMultiValuesViewController ()
+@interface LionMultiValuesViewController ()
 
 @end
 
-@implementation LSMultiValuesViewController
+@implementation LionMultiValuesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,12 +27,77 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.tableView.delegate = self.ls;
+    self.tableView.dataSource = self.ls;
+    self.ls.delegate = self;
+    self.tableView.frame = self.view.bounds;
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:self.tableView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UITableView *)tableView
+{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    }
+    return _tableView;
+}
+
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[self.settingsElement valueForKey:@"Titles"] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier = @"_table_view_cell_identifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+    }
+    
+    if (cell) {
+        //Todo:Config cell object.
+    }
+    
+    return cell;
+}
+
+#pragma mark - LlamaSettingsDelegate
+
+- (void)buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls
+{
+    
+}
+
+- (void)userDefaultDidChanged
+{
+    
+}
+
+- (void)settingsChanged:(LlamaSettings *)ls
+{
+    
 }
 
 @end
