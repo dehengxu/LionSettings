@@ -79,8 +79,12 @@
         //Todo:Config cell object.
         cell.textLabel.text = [[self.settingsElement valueForKey:@"Titles"] objectAtIndex:indexPath.row];
         NSLog(@"value :%@, all :%@", self.value, [self.settingsElement valueForKey:@"Values"]);
-        if ([self.value isEqualToString:[self.settingsElement valueForKey:@"Values"]]) {
-            [cell setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
+        NSArray *values = [self.settingsElement valueForKey:@"Values"];
+        for (NSString *_value in values) {
+            if ([self.value isEqualToString:_value]) {
+                [cell setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
+                break;
+            }
         }
     }
     
