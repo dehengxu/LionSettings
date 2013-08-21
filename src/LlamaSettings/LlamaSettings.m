@@ -1137,6 +1137,18 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     return nil;
 }
 
+- (id)settingsValueForKey:(NSString *)key
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    id value = [defaults valueForKey:key];
+    if (value) {
+        return value;
+    }
+    
+    NSDictionary *aSpecifiers = [self itemForKey:key];
+    return [aSpecifiers valueForKey:@"DefaultValue"];
+}
+
 #pragma mark - testing
 
 - (void)testCase

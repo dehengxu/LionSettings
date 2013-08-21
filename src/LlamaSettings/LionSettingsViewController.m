@@ -97,14 +97,13 @@
     NSLog(@"button key :%@", buttonKey);
     NSDictionary *element = [ls preferenceSpecifiersElementForKey:buttonKey];
     NSString *PSType = [ls PSTypeOfSettingsElement:element];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
         //Push to multi values view.
         LionMultiValuesViewController *lmvvc = [[[LionMultiValuesViewController alloc] init] autorelease];
         lmvvc.settingsElement = element;
         lmvvc.ls = self.ls;
-        lmvvc.value = [defaults valueForKey:buttonKey];
+        lmvvc.value = [self.ls settingsValueForKey:buttonKey];
         [self.navigationController pushViewController:lmvvc animated:YES];
     }
     
