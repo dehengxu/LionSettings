@@ -73,7 +73,7 @@
 												   green:(rgba[1]/2.0)
 													blue:(rgba[2]/2.0) 
 												   alpha:rgba[3] ];
-	return darkerColor;
+	return [darkerColor autorelease];
 }
 
 + (UIColor *)lighter:(UIColor *)startColor
@@ -88,7 +88,7 @@
 													green:((rgba[1] + 1.0)/2.0)
 													 blue:((rgba[2] + 1.0)/2.0) 
 													alpha:rgba[3] ];
-	return lighterColor;
+	return [lighterColor autorelease];
 }
 
 @end

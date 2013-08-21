@@ -32,10 +32,15 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 
 - (void)setView:(UITextView *)inView
 {
-	view = inView;
-	[self.view retain];
-	[self.contentView addSubview:inView];
-	[self layoutSubviews];
+    if (view != inView) {
+        if (view) {
+            [view removeFromSuperview];
+            [view release];
+        }
+        view = [inView retain];
+        [self.contentView addSubview:inView];
+        [self layoutSubviews];
+    }
 }
 
 - (void)layoutSubviews
