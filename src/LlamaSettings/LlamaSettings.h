@@ -85,5 +85,6 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 @protocol LlamaSettingsDelegate<NSObject>
 - (void) settingsChanged:(LlamaSettings *)ls;
 - (void) buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls;
+- (void) childPanelPressed:(NSDictionary *)aSpecifiers inSettings:(LlamaSettings *)ls;
 - (void) userDefaultDidChanged;
 @end

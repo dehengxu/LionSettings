@@ -1081,6 +1081,12 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         }
     }
     
+    if ([type isEqualToString:@"PSChildPaneSpecifier"]) {
+        if (delegate && [delegate respondsToSelector:@selector(childPanelPressed:inSettings:)]) {
+            [self.delegate childPanelPressed:(NSDictionary *)[self itemAtRow:indexPath.row inSection:indexPath.section] inSettings:self];
+        }
+    }
+    
 	[pool release];
 }
 

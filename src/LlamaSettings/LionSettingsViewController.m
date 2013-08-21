@@ -94,19 +94,27 @@
 - (void)buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls
 {
     //
+    NSLog(@"button key :%@", buttonKey);
     NSDictionary *element = [ls preferenceSpecifiersElementForKey:buttonKey];
     NSString *PSType = [ls PSTypeOfSettingsElement:element];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
         //Push to multi values view.
-        LionMultiValuesViewController *lmvvc = [[LionMultiValuesViewController alloc] init];
+        LionMultiValuesViewController *lmvvc = [[[LionMultiValuesViewController alloc] init] autorelease];
         lmvvc.settingsElement = element;
+        lmvvc.ls = self.ls;
+        lmvvc.value = [defaults valueForKey:buttonKey];
         [self.navigationController pushViewController:lmvvc animated:YES];
     }
     
-    if ([PSType isEqualToString:@"PSChildPaneSpecifier"]) {
-        
-    }
+}
+
+- (void)childPanelPressed:(NSDictionary *)aSpecifiers inSettings:(LlamaSettings *)ls
+{
+    LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings.bundle" andPlistName:@"AccountInfo.plist"] autorelease];
+    [lsvc setTitle:[aSpecifiers valueForKey:@"Title"]];
+    [self.navigationController pushViewController:lsvc animated:YES];
 }
 
 - (void)userDefaultDidChanged

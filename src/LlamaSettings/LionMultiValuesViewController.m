@@ -27,9 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.tableView.delegate = self.ls;
-    self.tableView.dataSource = self.ls;
-    self.ls.delegate = self;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.tableView.frame = self.view.bounds;
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:self.tableView];
@@ -73,11 +72,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
     }
     
     if (cell) {
         //Todo:Config cell object.
+        cell.textLabel.text = [[self.settingsElement valueForKey:@"Titles"] objectAtIndex:indexPath.row];
+        NSLog(@"value :%@, all :%@", self.value, [self.settingsElement valueForKey:@"Values"]);
+        if ([self.value isEqualToString:[self.settingsElement valueForKey:@"Values"]]) {
+            [cell setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
+        }
     }
     
     return cell;
