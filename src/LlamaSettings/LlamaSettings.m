@@ -328,7 +328,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
     labelWidget.textAlignment = NSTextAlignmentRight;
 	[labelWidget setBackgroundColor:[UIColor clearColor]];
-    labelWidget.text = [dict objectForKey:@"DefaultValue"];
+    labelWidget.text = [self titleForValue:[dict objectForKey:@"DefaultValue"] inValues:dict];
     labelWidget.textColor = kSystemValueTextColor;
     return [labelWidget autorelease];
 }
@@ -346,20 +346,21 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 {
 	CGRect frame = CGRectMake(0.0, 0.0, 150.0, kLabelHeight);
     id defaultValue = [dict objectForKey:@"DefaultValue"];
-    NSArray *values = [dict objectForKey:@"Values"];
+//    NSArray *values = [dict objectForKey:@"Values"];
     
 	UILabel * labelWidget = [[UILabel alloc] initWithFrame:frame];
     labelWidget.textAlignment = NSTextAlignmentRight;
 	[labelWidget setBackgroundColor:[UIColor clearColor]];
     
     
-    id value = nil;
-    for (int i = 0; i < [values count]; i++) {
-        value = [values objectAtIndex:i];
-        if ([value isEqual:defaultValue]) {
-            labelWidget.text = [[dict objectForKey:@"Titles"] objectAtIndex:i];
-        }
-    }
+//    id value = nil;
+//    for (int i = 0; i < [values count]; i++) {
+//        value = [values objectAtIndex:i];
+//        if ([value isEqual:defaultValue]) {
+//            labelWidget.text = [[dict objectForKey:@"Titles"] objectAtIndex:i];
+//        }
+//    }
+    labelWidget.text = [self titleForValue:defaultValue inValues:dict];
     
     labelWidget.textColor = kSystemValueTextColor;
     return [labelWidget autorelease];
@@ -624,12 +625,15 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	return nil;
 }
 
+/**
+ Return title for the value if which exist in values titles paire of the settings element or value self.
+ */
 - (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary
 {
     NSArray *titles = [dictionary objectForKey:@"Titles"];
     NSArray *values = [dictionary objectForKey:@"Values"];
     if (!titles || !values) {
-        return nil;
+        return value;
     }
     
     id _value = nil;
@@ -644,12 +648,31 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         return [titles objectAtIndex:i];
     }
     
+    return value;
+}
+
+- (NSString *)PSTypeOfSettingsElement:(NSDictionary *)dict
+{
+    return [dict objectForKey:@"Type"];
+}
+
+/**
+ Return an element from 
+ */
+- (NSDictionary *)preferenceSpecifiersElementForKey:(NSString *)key
+{
+    NSArray *preferences = [theDictionary objectForKey:@"PreferenceSpecifiers"];
+    for (NSDictionary *element in preferences) {
+        if ([[element valueForKey:@"Key"] isEqualToString:key]) {
+            return element;
+        }
+    }
     return nil;
 }
 
-
 #pragma mark -
 #pragma mark Loading and saving Settings to the System
+
 - (void) loadSettingsFromSystem
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -668,16 +691,13 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         
 		if( settingsValue != nil ) {
             //
-            for (item in preferences) {
-                if ([key isEqual:[item objectForKey:@"Key"]]) {
-                    PSType = [item objectForKey:@"Type"];
-                    break;
-                }
-                PSType = nil;
-                item = nil;
-            }
+            item = [self preferenceSpecifiersElementForKey:key];
+            PSType = [self PSTypeOfSettingsElement:item];
+//            NSLog(@"checking PSType :%@", PSType);
+
             if ([widget isKindOfClass:[UILabel class]]) {
-                if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
+                if ([PSType isEqualToString:@"PSMultiValueSpecifier"] ||
+                    [PSType isEqualToString:@"PSTitleValueSpecifier"]) {
                     ((UILabel*)widget).text = [self titleForValue:settingsValue inValues:item];
                 }else {
                     ((UILabel*)widget).text = [defaults valueForKey:key];
