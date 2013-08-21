@@ -76,8 +76,10 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 - (id)titleForValue:(id)value inValues:(NSDictionary *)dictionary;
 - (NSString *)PSTypeOfSettingsElement:(NSDictionary *)dict;
 - (NSDictionary *)preferenceSpecifiersElementForKey:(NSString *)key;
-
 - (id)settingsValueForKey:(NSString *)key;
+- (void)setSettingsValue:(id)value forKey:(NSString *)key;
+- (void)startListening;
+- (void)stopListening;
 
 - (void)testCase;
 

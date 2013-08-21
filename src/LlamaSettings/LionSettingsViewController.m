@@ -43,6 +43,8 @@
 - (void)dealloc
 {
     [_bundleName release];
+    [_ls release];
+    [_tableView release];
     [super dealloc];
 }
 
@@ -80,7 +82,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    
+    [self.ls loadSettingsFromSystem];
+    [self.ls startListening];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.ls stopListening];
 }
 
 - (void)didReceiveMemoryWarning

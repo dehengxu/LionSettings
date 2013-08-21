@@ -45,8 +45,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	{
 		//nsap = [[NSAutoreleasePool alloc] init];
 		self.valid = NO;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
-
+        [self startListening];
+        
 		[self loadHeirarchyFromPlist:plistName];
 	}
 	return self;
@@ -58,8 +58,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	{
 		//nsap = [[NSAutoreleasePool alloc] init];
 		self.valid = NO;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
-        
+        [self startListening];
 		[self loadHeirarchyFromDefaultPlist];
 	}	
 	return self;
@@ -102,7 +101,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void) dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+    [self stopListening];
 	if( theDictionary ) [theDictionary release];
 	if( theWidgets ) [theWidgets release];
 	if( theWebViews ) [theWebViews release];
@@ -829,18 +828,6 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	[pool release];
 }
 
-- (void)receiveNotification:(NSNotification *)notify
-{
-    if (notify) {
-        NSLog(@"notify :%@", notify);
-    }
-    
-    [self performSelector:@selector(loadSettingsFromSystem) withObject:nil afterDelay:1.0f];
-    if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
-        [delegate userDefaultDidChanged];
-    }
-}
-
 #pragma mark -
 #pragma mark UITableViewDelegate, UITableViewDataSource methods 
 
@@ -922,9 +909,6 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 {
 	return kUIRowHeight;
 }
-
-
-
 
 - (UITableViewCell *) tableView:(UITableView *)tableView
 		  cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -1147,6 +1131,35 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     
     NSDictionary *aSpecifiers = [self itemForKey:key];
     return [aSpecifiers valueForKey:@"DefaultValue"];
+}
+
+- (void)setSettingsValue:(id)value forKey:(NSString *)key
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:value forKey:key];
+    [defaults synchronize];
+}
+
+- (void)startListening
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+}
+
+- (void)stopListening
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+}
+
+- (void)receiveNotification:(NSNotification *)notify
+{
+    if (notify) {
+        NSLog(@"notify :%@", notify);
+    }
+    
+    [self performSelector:@selector(loadSettingsFromSystem) withObject:nil afterDelay:1.0f];
+    if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
+        [delegate userDefaultDidChanged];
+    }
 }
 
 #pragma mark - testing

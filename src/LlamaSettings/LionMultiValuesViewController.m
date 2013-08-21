@@ -34,10 +34,15 @@
     [self.view addSubview:self.tableView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    
+    [super viewWillAppear:animated];
+    [self.ls startListening];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.ls stopListening];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,6 +94,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __func__);
+    
+    NSArray *values = [self.settingsElement valueForKey:@"Values"];
+    self.value = [values objectAtIndex:indexPath.row];
+    [self.ls setSettingsValue:self.value forKey:[self.settingsElement valueForKey:@"Key"]];
+//    [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+    [self.tableView reloadData];
+}
+
 #pragma mark - LlamaSettingsDelegate
 
 - (void)buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls
@@ -98,7 +114,7 @@
 
 - (void)userDefaultDidChanged
 {
-    
+    [self.tableView reloadData];
 }
 
 - (void)settingsChanged:(LlamaSettings *)ls
