@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSDictionary *settingsElement;
 @property (nonatomic, retain) LlamaSettings *ls;
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) NSString *PSKey;
 @property (nonatomic, retain) id value;
 
 @end

@@ -111,8 +111,10 @@
         LionMultiValuesViewController *lmvvc = [[[LionMultiValuesViewController alloc] init] autorelease];
         lmvvc.settingsElement = element;
         lmvvc.ls = self.ls;
+        lmvvc.PSKey = buttonKey;
         lmvvc.value = [self.ls settingsValueForKey:buttonKey];
-        [self.navigationController pushViewController:lmvvc animated:YES];
+        self.multiValuesView = lmvvc;
+        [self.navigationController pushViewController:self.multiValuesView animated:YES];
     }
     
 }
@@ -126,7 +128,10 @@
 
 - (void)userDefaultDidChanged
 {
-    
+    if (self.multiValuesView) {
+        self.multiValuesView.value = [self.ls settingsValueForKey:self.multiValuesView.PSKey];
+        [self.multiValuesView.tableView reloadData];
+    }
 }
 
 - (void)settingsChanged:(LlamaSettings *)ls

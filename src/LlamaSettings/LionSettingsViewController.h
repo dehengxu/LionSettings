@@ -11,6 +11,7 @@
 #import "LlamaSettings.h"
 //@class LlamaSettings;
 //@protocol LlamaSettingsDelegate;
+@class LionMultiValuesViewController;
 
 @interface LionSettingsViewController : UIViewController<LlamaSettingsDelegate>
 {
@@ -21,6 +22,7 @@
 
 @property (nonatomic, retain) LlamaSettings *ls;
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) LionMultiValuesViewController *multiValuesView;
 
 - (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName;
 

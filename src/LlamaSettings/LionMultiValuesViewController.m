@@ -37,11 +37,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
     [self.ls startListening];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
     [self.ls stopListening];
 }
 
@@ -114,6 +116,7 @@
 
 - (void)userDefaultDidChanged
 {
+    NSLog(@"%s", __func__);
     [self.tableView reloadData];
 }
 

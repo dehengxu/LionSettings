@@ -748,6 +748,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	}
 //	[theKeys release];
 	[pool release];
+    
+    if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
+        [delegate userDefaultDidChanged];
+    }
+
 }
 
 - (void) tellDelegateSettingsChanged
@@ -1152,14 +1157,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 - (void)receiveNotification:(NSNotification *)notify
 {
-    if (notify) {
-        NSLog(@"notify :%@", notify);
-    }
+//    if (notify) {
+//        NSLog(@"notify :%@", notify);
+//    }
     
-    [self performSelector:@selector(loadSettingsFromSystem) withObject:nil afterDelay:1.0f];
-    if (delegate && [delegate respondsToSelector:@selector(userDefaultDidChanged)]) {
-        [delegate userDefaultDidChanged];
-    }
+    [self performSelector:@selector(loadSettingsFromSystem) withObject:nil afterDelay:0.7f];
 }
 
 #pragma mark - testing
