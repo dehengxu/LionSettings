@@ -435,7 +435,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:x];
         NSString *PSType = [aSpecifier valueForKey:@"Type"];
         NSString *PSKey = [aSpecifier valueForKey:@"Key"];
-        NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
+        //NSLog(@"type :%@\n\nkey :%@", PSType, PSKey);
+        
         if( PSKey && PSType ) {
             id v;
             if( [PSType isEqualToString:@"PSToggleSwitchSpecifier"] ) {
@@ -557,7 +558,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	// find the right section
 	int idx = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
     
-    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
+//    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
+    
 	if( idx < 0 ) return nil;
 	
 	// advance to row items
@@ -576,7 +578,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         return nil;
     }
     
-    NSLog(@"idx :%d\n", idx);
+    // NSLog(@"idx :%d\n", idx);
 	// okey, send it back!
 	return [preferenceSpecifiers objectAtIndex:idx];
 }
@@ -664,11 +666,10 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		id settingsValue = [defaults objectForKey:key];
         NSDictionary *item = nil;
         
-        NSLog(@"key :%@, sv :%@, class :%@", key, settingsValue, [widget classForCoder]);
 		if( settingsValue != nil ) {
             //
             for (item in preferences) {
-                if ([settingsValue isEqual:[item objectForKey:@"Key"]]) {
+                if ([key isEqual:[item objectForKey:@"Key"]]) {
                     PSType = [item objectForKey:@"Type"];
                     break;
                 }
@@ -677,7 +678,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             }
             if ([widget isKindOfClass:[UILabel class]]) {
                 if ([PSType isEqualToString:@"PSMultiValueSpecifier"]) {
-//                    ((UILabel*)widget).text = [self titleForValue:<#(id)#> inValues:<#(NSDictionary *)#>];//[item objectForKey:[defaults valueForKey:key]];
+                    ((UILabel*)widget).text = [self titleForValue:settingsValue inValues:item];
                 }else {
                     ((UILabel*)widget).text = [defaults valueForKey:key];
                 }
