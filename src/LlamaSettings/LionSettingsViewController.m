@@ -114,6 +114,7 @@
         lmvvc.PSKey = buttonKey;
         lmvvc.value = [self.ls settingsValueForKey:buttonKey];
         self.multiValuesView = lmvvc;
+        self.multiValuesView.title = [element valueForKey:@"Title"];
         [self.navigationController pushViewController:self.multiValuesView animated:YES];
     }
     
