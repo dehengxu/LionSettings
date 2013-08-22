@@ -1,8 +1,7 @@
-## LionSettings is a iOS System settings compatitable framework based on LlamaSettings project
-
+## LionSettings
 
 ### Introduction
-LionSettings based on LlamaSettings code.Add some features like:
+LionSettings is a iOS app settings compatitable framework based on LlamaSettings project which based on LlamaSettings code.Add some features like:
   
 1)Support use system "Settings.bundles" file in you apps.
   
