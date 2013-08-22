@@ -458,6 +458,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             continue;
         }
         
+        if ([PSType isEqualToString:@"PSChildPaneSpecifier"] && [(NSString *)[aSpecifier valueForKey:@"File"] length ] == 0) {
+            [illegaleSpecifiers addObject:aSpecifier];
+            continue;
+        }
+        
         if (![PSType isEqualToString:@"PSGroupSpecifier"] && ![PSType isEqualToString:@"PSChildPaneSpecifier"] && !PSKey) {
             [illegaleSpecifiers addObject:aSpecifier];
             continue;
