@@ -930,6 +930,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	NSString * type = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Type"];
 	UIView * widg = [self widgetForRow:[indexPath row] inSection:[indexPath section]];
+    //widg.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
+
 //    NSLog(@"%s type :%@, (%d, %d)", __func__, type, indexPath.row, indexPath.section);
     
 	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
@@ -971,7 +973,10 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		
 		CGRect frame = CGRectMake(0.0, 0.0, kSliderWidth, kSliderHeight);
-		((DisplayCell *)cell).view = [[[MPVolumeView alloc] initWithFrame:frame] autorelease];
+        MPVolumeView *volum = [[[MPVolumeView alloc] initWithFrame:frame] autorelease];
+        [volum setShowsVolumeSlider:YES];
+        [volum setShowsRouteButton:YES];
+		((DisplayCell *)cell).view = volum;
 	}
 	
 	if(	[type isEqualToString:@"BLSegmentedSpecifier"] )

@@ -797,7 +797,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LSExample_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = LSExample;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -809,7 +811,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LSExample_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = LSExample;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -1110,6 +1114,7 @@
 				74732C5A17C52230006747C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74732C5B17C52230006747C7 /* Build configuration list for PBXNativeTarget "LionSettingsLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -1118,6 +1123,7 @@
 				74732C5D17C52230006747C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74732C6E17C52250006747C7 /* Build configuration list for PBXNativeTarget "LionSettings" */ = {
 			isa = XCConfigurationList;
@@ -1126,6 +1132,7 @@
 				74732C7017C52250006747C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LSExample" */ = {
 			isa = XCConfigurationList;

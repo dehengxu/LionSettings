@@ -8,7 +8,6 @@
 	<string>mySettings</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
-
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
@@ -28,14 +27,6 @@
 				<string>Thing B</string>
 				<string>Foo 3</string>
 			</array>
-<!--
-			<key>Images</key>
-			<array>
-				<string>imageA.png</string>
-				<string>imageB.png</string>
-				<string>imageC.png</string>
-			</array>
--->
 			<key>Values</key>
 			<array>
 				<string>0</string>
@@ -45,31 +36,10 @@
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
-			<key>Title</key>
-			<string>A Slider</string>
-			<key>Key</key>
-			<string>pSlider</string>
-			<key>DefaultValue</key>
-			<real>1</real>
-			<key>MinimumValue</key>
-			<real>0.2</real>
-			<key>MaximumValue</key>
-			<real>1</real>
-<!--
-			<key>MinimumValueImage</key>
-			<string>min.png</string>
-			<key>MaximumValueImage</key>
-			<string>max.png</string>
--->
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>BLVolumeSpecifier</string>
 			<key>Title</key>
 			<string>Volume</string>
 		</dict>
-
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
@@ -124,7 +94,6 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
-
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
@@ -144,16 +113,14 @@
 			<string>Color1Column</string>
 			<key>ColorValues</key>
 			<array>
-				<!-- colors can be specified as 0..255 values -->
-				<string>255, 255, 255</string> 	<!-- white -->
-				<string>255, 0, 0</string> 	<!-- red -->
-				<string>255, 128, 0</string> 	<!-- orange -->
-				<string>255, 255, 0</string> 	<!-- yellow -->
-				<string>0, 255, 0</string> 	<!-- green -->
-				<string>0, 255, 255</string> 	<!-- cyan -->
-				<!-- colors can also be specified as 0.0..1.0 float values (be sure to include the '.') -->
-				<string>0.0, 0.0, 1.0</string> 	<!-- blue -->
-				<string>1.0, 0.0, 0.95</string>	<!-- purple -->
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0.0, 0.0, 1.0</string>
+				<string>1.0, 0.0, 0.95</string>
 			</array>
 		</dict>
 		<dict>
@@ -169,14 +136,14 @@
 			<string>Color2Columns</string>
 			<key>ColorValues</key>
 			<array>
-				<string>255, 255, 255</string> 	<!-- white -->
-				<string>255, 0, 0</string> 	<!-- red -->
-				<string>255, 128, 0</string> 	<!-- orange -->
-				<string>255, 255, 0</string> 	<!-- yellow -->
-				<string>0, 255, 0</string> 	<!-- green -->
-				<string>0, 255, 255</string> 	<!-- cyan -->
-				<string>0, 0, 255</string> 	<!-- blue -->
-				<string>255, 0, 255</string> 	<!-- purple -->
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0, 0, 255</string>
+				<string>255, 0, 255</string>
 			</array>
 		</dict>
 		<dict>
@@ -192,16 +159,15 @@
 			<string>TextualList</string>
 			<key>ColorValues</key>
 			<array>
-				<string>255, 255, 255</string> 	<!-- white -->
-				<string>255, 0, 0</string> 	<!-- red -->
-				<string>255, 128, 0</string> 	<!-- orange -->
-				<string>255, 255, 0</string> 	<!-- yellow -->
-				<string>0, 255, 0</string> 	<!-- green -->
-				<string>0, 255, 255</string> 	<!-- cyan -->
-				<string>0, 0, 255</string> 	<!-- blue -->
-				<string>255, 0, 255</string> 	<!-- purple -->
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0, 0, 255</string>
+				<string>255, 0, 255</string>
 			</array>
-			<!-- these are ignored for ColorBoxes, but here for fun -->
 			<key>ColorNames</key>
 			<array>
 				<string>White</string>
@@ -228,8 +194,6 @@
 			<key>Legend</key>
 			<string>Touch/drag to pick a color</string>
 		</dict>
-
-
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
