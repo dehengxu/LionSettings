@@ -24,6 +24,7 @@
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) LionMultiValuesViewController *multiValuesView;
 
+- (id)initWithSettingsBundleName:(NSString *)bundleName;
 - (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName;
 
 @end

@@ -17,15 +17,25 @@
 
 @implementation LionSettingsViewController
 
+- (id)initWithSettingsBundleName:(NSString *)bundleName
+{
+    self = [self initWithNibName:nil bundle:nil];
+    if (self) {
+        _bundleName = [[NSString alloc] initWithFormat:@"%@.bundle", bundleName];
+        _fileName = [@"Root.plist" copy];
+    }
+    return self;
+}
+
 - (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName
 {
     self = [self initWithNibName:nil bundle:nil];
     if (self) {
         _bundleName = [bundleName copy];
         if (!plistName) {
-            _fileName = @"Root.plist";
+            _fileName = [@"Root.plist" copy];
         }else {
-            _fileName = [plistName copy];
+            _fileName = [[NSString alloc] initWithFormat:@"%@.plist", plistName];
         }
     }
     return self;
@@ -36,6 +46,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _bundleName = [@"Settings.bundle" copy];
+        _fileName = [@"Root.plist" copy];
     }
     return self;
 }
@@ -43,6 +55,7 @@
 - (void)dealloc
 {
     [_bundleName release];
+    [_fileName release];
     [_ls release];
     [_tableView release];
     [super dealloc];
