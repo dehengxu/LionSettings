@@ -634,7 +634,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	// find the right section
 	int idx = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
     
-    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
+//    NSLog(@"row:%d, section:%d;   idx :%d", row, section, idx);
     
 	if( idx < 0 ) return nil;
 	
@@ -930,7 +930,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	NSString * type = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"Type"];
 	UIView * widg = [self widgetForRow:[indexPath row] inSection:[indexPath section]];
-    NSLog(@"%s type :%@, (%d, %d)", __func__, type, indexPath.row, indexPath.section);
+//    NSLog(@"%s type :%@, (%d, %d)", __func__, type, indexPath.row, indexPath.section);
     
 	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
 	   || [type isEqualToString:@"PSSliderSpecifier"]
