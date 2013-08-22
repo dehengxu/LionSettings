@@ -1,7 +1,7 @@
-###LionSettings is a iOS System settings compatitable framework based on LlamaSettings project
+## LionSettings is a iOS System settings compatitable framework based on LlamaSettings project
 
 
-####Introduction
+### Introduction
 LionSettings based on LlamaSettings code.Add some features like:
   
 1)Support use system "Settings.bundles" file in you apps.
@@ -15,14 +15,16 @@ LionSettings based on LlamaSettings code.Add some features like:
 5)Support extra customized type, to be continue...
 
 
-####Example use Settings.bundle directly.
+## Example
+
+####use Settings.bundle directly.
 		
 		LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] init] autorelease];
 	    //LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings" andPlistName:@"Root"] autorelease];
 
 		[self.navigationController pushViewController:lsvc];
 		
-####Example use you own MySettings.bundle
+####use you own MySettings.bundle
 		
 		LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings"] autorelease];
 	    //LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings" andPlistName:@"Root"] autorelease];
@@ -30,6 +32,6 @@ LionSettings based on LlamaSettings code.Add some features like:
 		[self.navigationController pushViewController:lsvc];
 		
 
-##### Special thanks to
+## Special thanks to
 [LlamaSettings origin project](https://code.google.com/p/llamasettings/)
 Thanks to yorgle http://umlautllama.com/
