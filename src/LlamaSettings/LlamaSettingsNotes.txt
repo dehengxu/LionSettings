@@ -59,7 +59,7 @@ MaximumValueImage			string (21x21)
 
 --------------------------------------------------------------------------------
 
-Type					string		PSMultiValueSpecifier			popup with more values
+Type					string		PSMultiValueSpecifier			push with more values
 Title					string
 Key					string
 DefaultValue				string
@@ -76,7 +76,7 @@ Title					string
 
 --------------------------------------------------------------------------------
 
-Type					string		PSChildPaneSpecifier	(* NOT SUPPORTED *)
+Type					string		PSChildPaneSpecifier            navigate to another plist file.
 Title					string
 File					string		"foo.plist" -> "foo"
 
