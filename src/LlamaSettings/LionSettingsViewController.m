@@ -21,8 +21,8 @@
 {
     self = [self initWithNibName:nil bundle:nil];
     if (self) {
-        _bundleName = [[NSString alloc] initWithFormat:@"%@.bundle", bundleName];
-        _fileName = [@"Root.plist" copy];
+        _bundleName = [bundleName copy];
+        _fileName = [@"Root" copy];
     }
     return self;
 }
@@ -33,9 +33,9 @@
     if (self) {
         _bundleName = [bundleName copy];
         if (!plistName) {
-            _fileName = [@"Root.plist" copy];
+            _fileName = [@"Root" copy];
         }else {
-            _fileName = [[NSString alloc] initWithFormat:@"%@.plist", plistName];
+            _fileName = [plistName copy];
         }
     }
     return self;
@@ -46,8 +46,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _bundleName = [@"Settings.bundle" copy];
-        _fileName = [@"Root.plist" copy];
+        _bundleName = [@"Settings" copy];
+        _fileName = [@"Root" copy];
     }
     return self;
 }
@@ -73,7 +73,7 @@
 {
     if (_ls == nil) {
         if (_bundleName) {
-            _ls = [[LlamaSettings alloc] initWithSettingsBundle:_bundleName andPlistName:_fileName];
+            _ls = [[LlamaSettings alloc] initWithSettingsBundle:[NSString stringWithFormat:@"%@.bundle", _bundleName] andPlistName:[NSString stringWithFormat:@"%@.plist", _fileName]];
         }else {
             _ls = [[LlamaSettings alloc] init];
         }
@@ -135,7 +135,8 @@
 
 - (void)childPanelPressed:(NSDictionary *)aSpecifiers inSettings:(LlamaSettings *)ls
 {
-    LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings.bundle" andPlistName:@"AccountInfo.plist"] autorelease];
+    //Only load plist in the same bundle.
+    LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:_bundleName andPlistName:[aSpecifiers valueForKey:@"File"]] autorelease];
     [lsvc setTitle:[aSpecifiers valueForKey:@"Title"]];
     [self.navigationController pushViewController:lsvc animated:YES];
 }
