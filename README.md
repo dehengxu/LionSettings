@@ -4,11 +4,15 @@
 ####Introduction
 LionSettings based on LlamaSettings code.Add some features like:
   
-  *)Support system "Settings.bundles" file.
+1)Support system "Settings.bundles" file.
   
-  *)Also support your own settings.bundls.
+2)Also support your own XxxSettings.bundls.
   
-  *)Auto reload settings after system settings changed.
+3)Auto reload settings after system settings changed.
+
+4)Support  PSTitleValueSpecifier, PSMultiValueSpecifier, PSSliderSpecifier, PSGroupSpecifier.
+
+5)Support extra customized type, to be continue...
   
 ####Example using compatibel with Settings.bundle
 		LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] init] autorelease];
