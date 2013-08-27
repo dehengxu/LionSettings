@@ -135,7 +135,6 @@ Type					string		BLFullButtonSpecifier (**)		a pressable button, calls delegate 
 Title					string
 Key					string
 
-
 --------------------------------------------------------------------------------
 
 Type					string		BLURLButtonSpecifier (**)
@@ -202,3 +201,30 @@ MaximumValueImage			string (21x21)
 Any section can have:  (TBD)
 Disable					array - value=0 is array 0, value=1 is array 1, etc (array of keys)
 Enable					array - value=0 is array 0, value=1 is array 1, etc (array of keys)
+
+
+
+
+/***************************************************************
+
+
+--------------------Append by Deheng.Xu---------------------
+
+
+***************************************************************/
+For all Custom Control (Type: BLxxxx, LSxxxx)
+
+TitleAligment       string      AlignmentLeft
+                                AlignmentRight
+                                AlignmentCenter(default)
+
+AccessoryType       string      AccessoryNone(default)
+                                AccessoryDisclosureIndicator
+                                AccessoryDetailDisclosureButton
+                                AccessoryCheckmark
+                                AccessoryDetailButton
+
+
+
+
+

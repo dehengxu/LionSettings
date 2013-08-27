@@ -32,7 +32,7 @@ NSString *kButtonCell_ID = @"ButtonCell_ID";
 		nameLabel.textColor = [UIColor darkGrayColor];
 		nameLabel.highlightedTextColor = [UIColor whiteColor];
 		nameLabel.font = [UIFont boldSystemFontOfSize:18];
-		nameLabel.textAlignment = UITextAlignmentCenter;
+		nameLabel.textAlignment = NSTextAlignmentCenter;
 		[self.contentView addSubview:nameLabel];
 	}
 	return self;

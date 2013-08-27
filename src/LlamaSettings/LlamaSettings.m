@@ -934,9 +934,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 //    NSLog(@"%s type :%@, (%d, %d)", __func__, type, indexPath.row, indexPath.section);
     
+    
+    //----------------------------  Build in control
 	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
 	   || [type isEqualToString:@"PSSliderSpecifier"]
-	   || [type isEqualToString:@"BLColorPickerSpecifier"]
+	   //|| [type isEqualToString:@"BLColorPickerSpecifier"]
 	   || [type isEqualToString:@"PSTitleValueSpecifier"]
 	   || [type isEqualToString:@"PSTextFieldSpecifier"]
        || [type isEqualToString:@"PSMultiValueSpecifier"])
@@ -953,7 +955,22 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         }
         
+        return cell;
 	}
+    
+    if ([type isEqualToString:@"BLColorPickerSpecifier"]) {
+		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
+		((DisplayCell *)cell).view = widg;
+		
+		if( [type isEqualToString:@"BLColorPickerSpecifier"] )
+		{
+            //cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		}
+        if ([type isEqualToString:@"PSMultiValueSpecifier"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        }
+    }
     
     if ([type isEqualToString:@"PSChildPaneSpecifier"]) {
 		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
@@ -989,9 +1006,30 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	   || [type isEqualToString:@"BLURLButtonSpecifier"])
 	{
 		cell = [[[ButtonCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+
 		((ButtonCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		[(ButtonCell *)cell layoutSubviews];
 	}
+    
+    if (cell) {
+        NSString *accessoryType = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"AccessoryType"];
+        if ([accessoryType isEqualToString:@"AccessoryDisclosureIndicator"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        }else if ([accessoryType isEqualToString:@"AccessoryDetailDisclosureButton"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+        }else if ([accessoryType isEqualToString:@"AccessoryCheckmark"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else if ([accessoryType isEqualToString:@"AccessoryDetailButton"]) {
+            [cell setAccessoryType:UITableViewCellAccessoryDetailButton];
+        }
+        
+        NSString *titleAligment = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"TitleAligment"];
+        if ([titleAligment isEqualToString:@"AlignmentLeft"]) {
+            ((ButtonCell *)cell).nameLabel.textAlignment = NSTextAlignmentLeft;
+        }else if ([titleAligment isEqualToString:@"AlignmentRight"]) {
+            ((ButtonCell *)cell).nameLabel.textAlignment = NSTextAlignmentRight;
+        }
+    }
     
 	return cell;
 }
