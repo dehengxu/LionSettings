@@ -13,6 +13,10 @@
 //@protocol LlamaSettingsDelegate;
 @class LionMultiValuesViewController;
 
+
+/**
+ * LionSettingsViewController
+ */
 @interface LionSettingsViewController : UIViewController<LlamaSettingsDelegate>
 {
 @private
@@ -20,11 +24,31 @@
     NSString *_fileName;
 }
 
+/**
+ * A LlamaSettings object.
+ */
 @property (nonatomic, retain) LlamaSettings *ls;
+/**
+ Table view for present setting items.
+ */
 @property (nonatomic, retain) UITableView *tableView;
+
+/**
+ A multiple values choosing user interface.
+ */
 @property (nonatomic, retain) LionMultiValuesViewController *multiValuesView;
 
+/**
+ @param bundleName
+ @return A LionSettingsViewController object.
+ */
 - (id)initWithSettingsBundleName:(NSString *)bundleName;
+
+/**
+ @param bundleName  Bundle name without extension.
+ @param plistName   plist name without extension.
+ @return A LionSettingsViewController object.
+ */
 - (id)initWithSettingsBundleName:(NSString *)bundleName andPlistName:(NSString *)plistName;
 
 @end

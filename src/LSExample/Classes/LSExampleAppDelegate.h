@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ RootViewController
+ */
 @class RootViewController;
 
 @interface LSExampleAppDelegate : NSObject <UIApplicationDelegate> {
