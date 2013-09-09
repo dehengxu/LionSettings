@@ -856,7 +856,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 //	while( [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers] >= 0 )	
 //		section++;
 //	return section;
-    NSLog(@"number of sections :%d", [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers]);
+//    NSLog(@"number of sections :%d", [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers]);
     return [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers];
 }
 
@@ -884,7 +884,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
     beginWithOutGroupIdentifier = [self beginWithOutGroupSpecifier:[preferenceSpecifiers objectAtIndex:0]];
     
-	NSLog(@"Section :%d, beginWithOutGroupIdentifier :%d;", section, beginWithOutGroupIdentifier);
+//	NSLog(@"Section :%d, beginWithOutGroupIdentifier :%d;", section, beginWithOutGroupIdentifier);
     
 	// find the right section
 	int idx1 = [self indexOfSection:section inSpecifierDictionary:preferenceSpecifiers];
