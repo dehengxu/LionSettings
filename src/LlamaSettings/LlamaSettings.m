@@ -897,19 +897,19 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	// return the difference
 	if( idx2 > 0 ) {
         if (beginWithOutGroupIdentifier && idx1 == 0) {
-            NSLog(@"A numbers of section(%d) :%d", section, idx2 - idx1);
+//            NSLog(@"A numbers of section(%d) :%d", section, idx2 - idx1);
             return idx2 - idx1;
         }
-        NSLog(@"B numbers of section(%d) :%d", section, idx2 - idx1 - 1);
+//        NSLog(@"B numbers of section(%d) :%d", section, idx2 - idx1 - 1);
         return (idx2 - idx1 - 1);
     }
 	
 	// return the difference to the end, if there was no "next" section
     if (beginWithOutGroupIdentifier && idx1 == 0) {
-        NSLog(@"C numbers of section(%d) :%d", section, [preferenceSpecifiers count]);
+//        NSLog(@"C numbers of section(%d) :%d", section, [preferenceSpecifiers count]);
         return [preferenceSpecifiers count];
     }
-    NSLog(@"D numbers of section(%d) :%d", section, [preferenceSpecifiers count] - idx1 - 1);
+//    NSLog(@"D numbers of section(%d) :%d", section, [preferenceSpecifiers count] - idx1 - 1);
 	return [preferenceSpecifiers count] - idx1 - 1;
 }
 
