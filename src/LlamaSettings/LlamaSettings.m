@@ -1020,7 +1020,11 @@ static LlamaSettings *_sharedLlamaSettings = nil;
         }else if ([accessoryType isEqualToString:@"AccessoryCheckmark"]) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         }else if ([accessoryType isEqualToString:@"AccessoryDetailButton"]) {
-            [cell setAccessoryType:UITableViewCellAccessoryDetailButton];
+            if ([UIDevice currentDevice].systemVersion.floatValue > 6.) {
+                [cell setAccessoryType:UITableViewCellAccessoryDetailButton];
+            }else {
+                [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+            }
         }
         
         NSString *titleAligment = [self propertyForRow:[indexPath row] inSection:[indexPath section] ofProperty:@"TitleAligment"];
