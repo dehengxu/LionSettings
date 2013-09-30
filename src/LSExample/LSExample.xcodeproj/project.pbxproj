@@ -49,23 +49,6 @@
 		5E6730700F85B2EB0094A5B9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E67306F0F85B2EB0094A5B9 /* Icon.png */; };
 		5EEB72AA0FC31E070052FAA7 /* mySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72A90FC31E070052FAA7 /* mySettings.plist */; };
 		5EEB72BF0FC31F630052FAA7 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72BE0FC31F630052FAA7 /* example.html */; };
-		7420AA2517C51F4200776F9B /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0317C51F4200776F9B /* ColorHelper.m */; };
-		7420AA2617C51F4200776F9B /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */; };
-		7420AA2717C51F4200776F9B /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0717C51F4200776F9B /* LionSettingsViewController.m */; };
-		7420AA2817C51F4200776F9B /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0917C51F4200776F9B /* LlamaSettings.m */; };
-		7420AA2917C51F4200776F9B /* LlamaSettingsNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7420AA0A17C51F4200776F9B /* LlamaSettingsNotes.txt */; };
-		7420AA2A17C51F4200776F9B /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0D17C51F4200776F9B /* ButtonCell.m */; };
-		7420AA2B17C51F4200776F9B /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0F17C51F4200776F9B /* CellFullWide.m */; };
-		7420AA2C17C51F4200776F9B /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1117C51F4200776F9B /* CellTextField.m */; };
-		7420AA2D17C51F4200776F9B /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1317C51F4200776F9B /* CellTextView.m */; };
-		7420AA2E17C51F4200776F9B /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1517C51F4200776F9B /* DisplayCell.m */; };
-		7420AA2F17C51F4200776F9B /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1717C51F4200776F9B /* EditableTableViewCell.m */; };
-		7420AA3017C51F4200776F9B /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1917C51F4200776F9B /* SliderCell.m */; };
-		7420AA3117C51F4200776F9B /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1B17C51F4200776F9B /* SourceCell.m */; };
-		7420AA3217C51F4200776F9B /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */; };
-		7420AA3317C51F4200776F9B /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2017C51F4200776F9B /* ColorTouchPicker.m */; };
-		7420AA3417C51F4200776F9B /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; };
-		7420AA3517C51F4200776F9B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; };
 		7420AA3717C51F7F00776F9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7420AA3617C51F7F00776F9B /* Settings.bundle */; };
 		74732C3C17C5222F006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74732C4017C5222F006747C7 /* LionSettingsLibrary.h */; };
@@ -78,44 +61,62 @@
 		74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */; };
 		74732C6617C52250006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C6A17C52250006747C7 /* InfoPlist.strings */; };
-		74732C7117C52268006747C7 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0317C51F4200776F9B /* ColorHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7217C52268006747C7 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7317C52268006747C7 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0717C51F4200776F9B /* LionSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7417C52268006747C7 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0917C51F4200776F9B /* LlamaSettings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7517C52268006747C7 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0D17C51F4200776F9B /* ButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7617C52268006747C7 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0F17C51F4200776F9B /* CellFullWide.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7717C52268006747C7 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1117C51F4200776F9B /* CellTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7817C52268006747C7 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1317C51F4200776F9B /* CellTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7917C52268006747C7 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1517C51F4200776F9B /* DisplayCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7A17C52268006747C7 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1717C51F4200776F9B /* EditableTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7B17C52268006747C7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1917C51F4200776F9B /* SliderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7C17C52268006747C7 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1B17C51F4200776F9B /* SourceCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7D17C52268006747C7 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7E17C52268006747C7 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2017C51F4200776F9B /* ColorTouchPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C7F17C52268006747C7 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74732C8017C52268006747C7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74732C8117C5227F006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
 		74732C8217C52283006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		74732C8317C52289006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
 		74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
-		74732C8717C522C6006747C7 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0317C51F4200776F9B /* ColorHelper.m */; };
-		74732C8817C522C6006747C7 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */; };
-		74732C8917C522C6006747C7 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0717C51F4200776F9B /* LionSettingsViewController.m */; };
-		74732C8A17C522C6006747C7 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0917C51F4200776F9B /* LlamaSettings.m */; };
-		74732C8B17C522C6006747C7 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0D17C51F4200776F9B /* ButtonCell.m */; };
-		74732C8C17C522C6006747C7 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA0F17C51F4200776F9B /* CellFullWide.m */; };
-		74732C8D17C522C6006747C7 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1117C51F4200776F9B /* CellTextField.m */; };
-		74732C8E17C522C6006747C7 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1317C51F4200776F9B /* CellTextView.m */; };
-		74732C8F17C522C6006747C7 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1517C51F4200776F9B /* DisplayCell.m */; };
-		74732C9017C522C6006747C7 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1717C51F4200776F9B /* EditableTableViewCell.m */; };
-		74732C9117C522C6006747C7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1917C51F4200776F9B /* SliderCell.m */; };
-		74732C9217C522C6006747C7 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1B17C51F4200776F9B /* SourceCell.m */; };
-		74732C9317C522C6006747C7 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */; };
-		74732C9417C522C6006747C7 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2017C51F4200776F9B /* ColorTouchPicker.m */; };
-		74732C9517C522C6006747C7 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2217C51F4200776F9B /* LSColorDisplay.m */; };
-		74732C9617C522C6006747C7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7420AA2417C51F4200776F9B /* WebViewController.m */; };
+		A2A7238A17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
+		A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
+		A2A7238C17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
+		A2A7238D17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
+		A2A7238E17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
+		A2A7238F17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
+		A2A7239017F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
+		A2A7239117F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
+		A2A7239217F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
+		A2A7239317F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
+		A2A7239417F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
+		A2A7239517F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
+		A2A7239617F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */; };
+		A2A7239717F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */; };
+		A2A7239817F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
+		A2A7239917F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
+		A2A7239A17F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
+		A2A7239B17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
+		A2A7239C17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
+		A2A7239D17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
+		A2A7239E17F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
+		A2A7239F17F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
+		A2A723A017F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
+		A2A723A117F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
+		A2A723A217F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
+		A2A723A317F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
+		A2A723A417F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
+		A2A723A517F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
+		A2A723A617F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
+		A2A723A717F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
+		A2A723A817F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
+		A2A723A917F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
+		A2A723AA17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
+		A2A723AB17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
+		A2A723AC17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
+		A2A723AD17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
+		A2A723AE17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
+		A2A723AF17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
+		A2A723B017F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
+		A2A723B117F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
+		A2A723B217F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
+		A2A723B317F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
+		A2A723B417F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
+		A2A723B517F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
+		A2A723B617F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
+		A2A723B717F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
+		A2A723B817F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
+		A2A723B917F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
+		A2A723BA17F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
+		A2A723BB17F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,40 +168,6 @@
 		5E67306F0F85B2EB0094A5B9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		5EEB72A90FC31E070052FAA7 /* mySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mySettings.plist; sourceTree = "<group>"; };
 		5EEB72BE0FC31F630052FAA7 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
-		7420AA0017C51F4200776F9B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		7420AA0217C51F4200776F9B /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
-		7420AA0317C51F4200776F9B /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
-		7420AA0417C51F4200776F9B /* LionMultiValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LionMultiValuesViewController.h; sourceTree = "<group>"; };
-		7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LionMultiValuesViewController.m; sourceTree = "<group>"; };
-		7420AA0617C51F4200776F9B /* LionSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LionSettingsViewController.h; sourceTree = "<group>"; };
-		7420AA0717C51F4200776F9B /* LionSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LionSettingsViewController.m; sourceTree = "<group>"; };
-		7420AA0817C51F4200776F9B /* LlamaSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LlamaSettings.h; sourceTree = "<group>"; };
-		7420AA0917C51F4200776F9B /* LlamaSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LlamaSettings.m; sourceTree = "<group>"; };
-		7420AA0A17C51F4200776F9B /* LlamaSettingsNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LlamaSettingsNotes.txt; sourceTree = "<group>"; };
-		7420AA0C17C51F4200776F9B /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
-		7420AA0D17C51F4200776F9B /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
-		7420AA0E17C51F4200776F9B /* CellFullWide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFullWide.h; sourceTree = "<group>"; };
-		7420AA0F17C51F4200776F9B /* CellFullWide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFullWide.m; sourceTree = "<group>"; };
-		7420AA1017C51F4200776F9B /* CellTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextField.h; sourceTree = "<group>"; };
-		7420AA1117C51F4200776F9B /* CellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextField.m; sourceTree = "<group>"; };
-		7420AA1217C51F4200776F9B /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextView.h; sourceTree = "<group>"; };
-		7420AA1317C51F4200776F9B /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextView.m; sourceTree = "<group>"; };
-		7420AA1417C51F4200776F9B /* DisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayCell.h; sourceTree = "<group>"; };
-		7420AA1517C51F4200776F9B /* DisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayCell.m; sourceTree = "<group>"; };
-		7420AA1617C51F4200776F9B /* EditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewCell.h; sourceTree = "<group>"; };
-		7420AA1717C51F4200776F9B /* EditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
-		7420AA1817C51F4200776F9B /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
-		7420AA1917C51F4200776F9B /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
-		7420AA1A17C51F4200776F9B /* SourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCell.h; sourceTree = "<group>"; };
-		7420AA1B17C51F4200776F9B /* SourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceCell.m; sourceTree = "<group>"; };
-		7420AA1D17C51F4200776F9B /* ColorBoxPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBoxPicker.h; sourceTree = "<group>"; };
-		7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorBoxPicker.m; sourceTree = "<group>"; };
-		7420AA1F17C51F4200776F9B /* ColorTouchPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTouchPicker.h; sourceTree = "<group>"; };
-		7420AA2017C51F4200776F9B /* ColorTouchPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTouchPicker.m; sourceTree = "<group>"; };
-		7420AA2117C51F4200776F9B /* LSColorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSColorDisplay.h; sourceTree = "<group>"; };
-		7420AA2217C51F4200776F9B /* LSColorDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSColorDisplay.m; sourceTree = "<group>"; };
-		7420AA2317C51F4200776F9B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		7420AA2417C51F4200776F9B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		7420AA3617C51F7F00776F9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLionSettingsLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74732C3F17C5222F006747C7 /* LionSettingsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettingsLibrary-Prefix.pch"; sourceTree = "<group>"; };
@@ -215,6 +182,40 @@
 		74732C6B17C52250006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettings-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A7236517F928AF00B82D62 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A2A7236717F928AF00B82D62 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
+		A2A7236817F928AF00B82D62 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
+		A2A7236917F928AF00B82D62 /* LionMultiValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LionMultiValuesViewController.h; sourceTree = "<group>"; };
+		A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LionMultiValuesViewController.m; sourceTree = "<group>"; };
+		A2A7236B17F928AF00B82D62 /* LionSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LionSettingsViewController.h; sourceTree = "<group>"; };
+		A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LionSettingsViewController.m; sourceTree = "<group>"; };
+		A2A7236D17F928AF00B82D62 /* LlamaSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LlamaSettings.h; sourceTree = "<group>"; };
+		A2A7236E17F928AF00B82D62 /* LlamaSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LlamaSettings.m; sourceTree = "<group>"; };
+		A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LlamaSettingsNotes.txt; sourceTree = "<group>"; };
+		A2A7237117F928AF00B82D62 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		A2A7237217F928AF00B82D62 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
+		A2A7237317F928AF00B82D62 /* CellFullWide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFullWide.h; sourceTree = "<group>"; };
+		A2A7237417F928AF00B82D62 /* CellFullWide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFullWide.m; sourceTree = "<group>"; };
+		A2A7237517F928AF00B82D62 /* CellTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextField.h; sourceTree = "<group>"; };
+		A2A7237617F928AF00B82D62 /* CellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextField.m; sourceTree = "<group>"; };
+		A2A7237717F928AF00B82D62 /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextView.h; sourceTree = "<group>"; };
+		A2A7237817F928AF00B82D62 /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextView.m; sourceTree = "<group>"; };
+		A2A7237917F928AF00B82D62 /* DisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayCell.h; sourceTree = "<group>"; };
+		A2A7237A17F928AF00B82D62 /* DisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayCell.m; sourceTree = "<group>"; };
+		A2A7237B17F928AF00B82D62 /* EditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewCell.h; sourceTree = "<group>"; };
+		A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
+		A2A7237D17F928AF00B82D62 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		A2A7237E17F928AF00B82D62 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		A2A7237F17F928AF00B82D62 /* SourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCell.h; sourceTree = "<group>"; };
+		A2A7238017F928AF00B82D62 /* SourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceCell.m; sourceTree = "<group>"; };
+		A2A7238217F928AF00B82D62 /* ColorBoxPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBoxPicker.h; sourceTree = "<group>"; };
+		A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorBoxPicker.m; sourceTree = "<group>"; };
+		A2A7238417F928AF00B82D62 /* ColorTouchPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTouchPicker.h; sourceTree = "<group>"; };
+		A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTouchPicker.m; sourceTree = "<group>"; };
+		A2A7238617F928AF00B82D62 /* LSColorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSColorDisplay.h; sourceTree = "<group>"; };
+		A2A7238717F928AF00B82D62 /* LSColorDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSColorDisplay.m; sourceTree = "<group>"; };
+		A2A7238817F928AF00B82D62 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		A2A7238917F928AF00B82D62 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,7 +313,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				7420A9FF17C51F4200776F9B /* LlamaSettings */,
+				A2A7236417F928AF00B82D62 /* LionSettings */,
 				289233A00DB2D0730083E9F9 /* Main View */,
 				281C6CD70DB2D82200F60ACC /* Flipside View */,
 				080E96DDFE201D6D7F000001 /* Application Controllers */,
@@ -379,72 +380,6 @@
 			name = "LlamaSettings Resources";
 			sourceTree = "<group>";
 		};
-		7420A9FF17C51F4200776F9B /* LlamaSettings */ = {
-			isa = PBXGroup;
-			children = (
-				7420AA0017C51F4200776F9B /* Constants.h */,
-				7420AA0117C51F4200776F9B /* Helpers */,
-				7420AA0417C51F4200776F9B /* LionMultiValuesViewController.h */,
-				7420AA0517C51F4200776F9B /* LionMultiValuesViewController.m */,
-				7420AA0617C51F4200776F9B /* LionSettingsViewController.h */,
-				7420AA0717C51F4200776F9B /* LionSettingsViewController.m */,
-				7420AA0817C51F4200776F9B /* LlamaSettings.h */,
-				7420AA0917C51F4200776F9B /* LlamaSettings.m */,
-				7420AA0A17C51F4200776F9B /* LlamaSettingsNotes.txt */,
-				7420AA0B17C51F4200776F9B /* TableCells */,
-				7420AA1C17C51F4200776F9B /* Views */,
-			);
-			name = LlamaSettings;
-			path = ../LlamaSettings;
-			sourceTree = "<group>";
-		};
-		7420AA0117C51F4200776F9B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7420AA0217C51F4200776F9B /* ColorHelper.h */,
-				7420AA0317C51F4200776F9B /* ColorHelper.m */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		7420AA0B17C51F4200776F9B /* TableCells */ = {
-			isa = PBXGroup;
-			children = (
-				7420AA0C17C51F4200776F9B /* ButtonCell.h */,
-				7420AA0D17C51F4200776F9B /* ButtonCell.m */,
-				7420AA0E17C51F4200776F9B /* CellFullWide.h */,
-				7420AA0F17C51F4200776F9B /* CellFullWide.m */,
-				7420AA1017C51F4200776F9B /* CellTextField.h */,
-				7420AA1117C51F4200776F9B /* CellTextField.m */,
-				7420AA1217C51F4200776F9B /* CellTextView.h */,
-				7420AA1317C51F4200776F9B /* CellTextView.m */,
-				7420AA1417C51F4200776F9B /* DisplayCell.h */,
-				7420AA1517C51F4200776F9B /* DisplayCell.m */,
-				7420AA1617C51F4200776F9B /* EditableTableViewCell.h */,
-				7420AA1717C51F4200776F9B /* EditableTableViewCell.m */,
-				7420AA1817C51F4200776F9B /* SliderCell.h */,
-				7420AA1917C51F4200776F9B /* SliderCell.m */,
-				7420AA1A17C51F4200776F9B /* SourceCell.h */,
-				7420AA1B17C51F4200776F9B /* SourceCell.m */,
-			);
-			path = TableCells;
-			sourceTree = "<group>";
-		};
-		7420AA1C17C51F4200776F9B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7420AA1D17C51F4200776F9B /* ColorBoxPicker.h */,
-				7420AA1E17C51F4200776F9B /* ColorBoxPicker.m */,
-				7420AA1F17C51F4200776F9B /* ColorTouchPicker.h */,
-				7420AA2017C51F4200776F9B /* ColorTouchPicker.m */,
-				7420AA2117C51F4200776F9B /* LSColorDisplay.h */,
-				7420AA2217C51F4200776F9B /* LSColorDisplay.m */,
-				7420AA2317C51F4200776F9B /* WebViewController.h */,
-				7420AA2417C51F4200776F9B /* WebViewController.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		74732C3D17C5222F006747C7 /* LionSettingsLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +432,72 @@
 				74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2A7236417F928AF00B82D62 /* LionSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A2A7236517F928AF00B82D62 /* Constants.h */,
+				A2A7236617F928AF00B82D62 /* Helpers */,
+				A2A7236917F928AF00B82D62 /* LionMultiValuesViewController.h */,
+				A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */,
+				A2A7236B17F928AF00B82D62 /* LionSettingsViewController.h */,
+				A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */,
+				A2A7236D17F928AF00B82D62 /* LlamaSettings.h */,
+				A2A7236E17F928AF00B82D62 /* LlamaSettings.m */,
+				A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */,
+				A2A7237017F928AF00B82D62 /* TableCells */,
+				A2A7238117F928AF00B82D62 /* Views */,
+			);
+			name = LionSettings;
+			path = ../LionSettings;
+			sourceTree = "<group>";
+		};
+		A2A7236617F928AF00B82D62 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2A7236717F928AF00B82D62 /* ColorHelper.h */,
+				A2A7236817F928AF00B82D62 /* ColorHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A2A7237017F928AF00B82D62 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				A2A7237117F928AF00B82D62 /* ButtonCell.h */,
+				A2A7237217F928AF00B82D62 /* ButtonCell.m */,
+				A2A7237317F928AF00B82D62 /* CellFullWide.h */,
+				A2A7237417F928AF00B82D62 /* CellFullWide.m */,
+				A2A7237517F928AF00B82D62 /* CellTextField.h */,
+				A2A7237617F928AF00B82D62 /* CellTextField.m */,
+				A2A7237717F928AF00B82D62 /* CellTextView.h */,
+				A2A7237817F928AF00B82D62 /* CellTextView.m */,
+				A2A7237917F928AF00B82D62 /* DisplayCell.h */,
+				A2A7237A17F928AF00B82D62 /* DisplayCell.m */,
+				A2A7237B17F928AF00B82D62 /* EditableTableViewCell.h */,
+				A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */,
+				A2A7237D17F928AF00B82D62 /* SliderCell.h */,
+				A2A7237E17F928AF00B82D62 /* SliderCell.m */,
+				A2A7237F17F928AF00B82D62 /* SourceCell.h */,
+				A2A7238017F928AF00B82D62 /* SourceCell.m */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		A2A7238117F928AF00B82D62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2A7238217F928AF00B82D62 /* ColorBoxPicker.h */,
+				A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */,
+				A2A7238417F928AF00B82D62 /* ColorTouchPicker.h */,
+				A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */,
+				A2A7238617F928AF00B82D62 /* LSColorDisplay.h */,
+				A2A7238717F928AF00B82D62 /* LSColorDisplay.m */,
+				A2A7238817F928AF00B82D62 /* WebViewController.h */,
+				A2A7238917F928AF00B82D62 /* WebViewController.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,8 +634,8 @@
 				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
 				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
 				5E6730700F85B2EB0094A5B9 /* Icon.png in Resources */,
+				A2A7239617F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */,
 				5EEB72AA0FC31E070052FAA7 /* mySettings.plist in Resources */,
-				7420AA2917C51F4200776F9B /* LlamaSettingsNotes.txt in Resources */,
 				5EEB72BF0FC31F630052FAA7 /* example.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74732C5517C52230006747C7 /* InfoPlist.strings in Resources */,
+				A2A7239717F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,29 +732,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7420AA3117C51F4200776F9B /* SourceCell.m in Sources */,
-				7420AA2617C51F4200776F9B /* LionMultiValuesViewController.m in Sources */,
-				7420AA2817C51F4200776F9B /* LlamaSettings.m in Sources */,
+				A2A723AD17F928AF00B82D62 /* SourceCell.m in Sources */,
+				A2A7238D17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */,
+				A2A7239317F928AF00B82D62 /* LlamaSettings.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				7420AA2F17C51F4200776F9B /* EditableTableViewCell.m in Sources */,
-				7420AA2C17C51F4200776F9B /* CellTextField.m in Sources */,
+				A2A723A717F928AF00B82D62 /* EditableTableViewCell.m in Sources */,
+				A2A7239E17F928AF00B82D62 /* CellTextField.m in Sources */,
 				1D3623260D0F684500981E51 /* LSExampleAppDelegate.m in Sources */,
 				289233A60DB2D0840083E9F9 /* FlipsideView.m in Sources */,
 				289233A70DB2D0840083E9F9 /* MainView.m in Sources */,
-				7420AA2717C51F4200776F9B /* LionSettingsViewController.m in Sources */,
-				7420AA2A17C51F4200776F9B /* ButtonCell.m in Sources */,
-				7420AA2D17C51F4200776F9B /* CellTextView.m in Sources */,
+				A2A7239017F928AF00B82D62 /* LionSettingsViewController.m in Sources */,
+				A2A7239817F928AF00B82D62 /* ButtonCell.m in Sources */,
+				A2A723A117F928AF00B82D62 /* CellTextView.m in Sources */,
 				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
 				289233AF0DB2D0DB0083E9F9 /* RootViewController.m in Sources */,
 				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */,
-				7420AA3417C51F4200776F9B /* LSColorDisplay.m in Sources */,
-				7420AA2517C51F4200776F9B /* ColorHelper.m in Sources */,
-				7420AA2E17C51F4200776F9B /* DisplayCell.m in Sources */,
-				7420AA3217C51F4200776F9B /* ColorBoxPicker.m in Sources */,
-				7420AA3517C51F4200776F9B /* WebViewController.m in Sources */,
-				7420AA3017C51F4200776F9B /* SliderCell.m in Sources */,
-				7420AA3317C51F4200776F9B /* ColorTouchPicker.m in Sources */,
-				7420AA2B17C51F4200776F9B /* CellFullWide.m in Sources */,
+				A2A723B617F928AF00B82D62 /* LSColorDisplay.m in Sources */,
+				A2A7238A17F928AF00B82D62 /* ColorHelper.m in Sources */,
+				A2A723A417F928AF00B82D62 /* DisplayCell.m in Sources */,
+				A2A723B017F928AF00B82D62 /* ColorBoxPicker.m in Sources */,
+				A2A723B917F928AF00B82D62 /* WebViewController.m in Sources */,
+				A2A723AA17F928AF00B82D62 /* SliderCell.m in Sources */,
+				A2A723B317F928AF00B82D62 /* ColorTouchPicker.m in Sources */,
+				A2A7239B17F928AF00B82D62 /* CellFullWide.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,23 +762,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74732C7117C52268006747C7 /* ColorHelper.m in Sources */,
-				74732C7217C52268006747C7 /* LionMultiValuesViewController.m in Sources */,
-				74732C7317C52268006747C7 /* LionSettingsViewController.m in Sources */,
-				74732C7417C52268006747C7 /* LlamaSettings.m in Sources */,
-				74732C7517C52268006747C7 /* ButtonCell.m in Sources */,
-				74732C7617C52268006747C7 /* CellFullWide.m in Sources */,
-				74732C7717C52268006747C7 /* CellTextField.m in Sources */,
-				74732C7817C52268006747C7 /* CellTextView.m in Sources */,
-				74732C7917C52268006747C7 /* DisplayCell.m in Sources */,
-				74732C7A17C52268006747C7 /* EditableTableViewCell.m in Sources */,
-				74732C7B17C52268006747C7 /* SliderCell.m in Sources */,
-				74732C7C17C52268006747C7 /* SourceCell.m in Sources */,
-				74732C7D17C52268006747C7 /* ColorBoxPicker.m in Sources */,
-				74732C7E17C52268006747C7 /* ColorTouchPicker.m in Sources */,
-				74732C7F17C52268006747C7 /* LSColorDisplay.m in Sources */,
-				74732C8017C52268006747C7 /* WebViewController.m in Sources */,
+				A2A723A217F928AF00B82D62 /* CellTextView.m in Sources */,
+				A2A723B117F928AF00B82D62 /* ColorBoxPicker.m in Sources */,
+				A2A7238E17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */,
+				A2A723A817F928AF00B82D62 /* EditableTableViewCell.m in Sources */,
+				A2A7239917F928AF00B82D62 /* ButtonCell.m in Sources */,
+				A2A7239117F928AF00B82D62 /* LionSettingsViewController.m in Sources */,
+				A2A7239F17F928AF00B82D62 /* CellTextField.m in Sources */,
 				74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */,
+				A2A723BA17F928AF00B82D62 /* WebViewController.m in Sources */,
+				A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */,
+				A2A723AE17F928AF00B82D62 /* SourceCell.m in Sources */,
+				A2A723B417F928AF00B82D62 /* ColorTouchPicker.m in Sources */,
+				A2A7239417F928AF00B82D62 /* LlamaSettings.m in Sources */,
+				A2A723A517F928AF00B82D62 /* DisplayCell.m in Sources */,
+				A2A723AB17F928AF00B82D62 /* SliderCell.m in Sources */,
+				A2A7239C17F928AF00B82D62 /* CellFullWide.m in Sources */,
+				A2A723B717F928AF00B82D62 /* LSColorDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +786,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A723A317F928AF00B82D62 /* CellTextView.m in Sources */,
+				A2A723B217F928AF00B82D62 /* ColorBoxPicker.m in Sources */,
+				A2A7238F17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */,
+				A2A723A917F928AF00B82D62 /* EditableTableViewCell.m in Sources */,
+				A2A7239A17F928AF00B82D62 /* ButtonCell.m in Sources */,
+				A2A7239217F928AF00B82D62 /* LionSettingsViewController.m in Sources */,
+				A2A723A017F928AF00B82D62 /* CellTextField.m in Sources */,
 				74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */,
+				A2A723BB17F928AF00B82D62 /* WebViewController.m in Sources */,
+				A2A7238C17F928AF00B82D62 /* ColorHelper.m in Sources */,
+				A2A723AF17F928AF00B82D62 /* SourceCell.m in Sources */,
+				A2A723B517F928AF00B82D62 /* ColorTouchPicker.m in Sources */,
+				A2A7239517F928AF00B82D62 /* LlamaSettings.m in Sources */,
+				A2A723A617F928AF00B82D62 /* DisplayCell.m in Sources */,
+				A2A723AC17F928AF00B82D62 /* SliderCell.m in Sources */,
+				A2A7239D17F928AF00B82D62 /* CellFullWide.m in Sources */,
+				A2A723B817F928AF00B82D62 /* LSColorDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,22 +810,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74732C8717C522C6006747C7 /* ColorHelper.m in Sources */,
-				74732C8817C522C6006747C7 /* LionMultiValuesViewController.m in Sources */,
-				74732C8917C522C6006747C7 /* LionSettingsViewController.m in Sources */,
-				74732C8A17C522C6006747C7 /* LlamaSettings.m in Sources */,
-				74732C8B17C522C6006747C7 /* ButtonCell.m in Sources */,
-				74732C8C17C522C6006747C7 /* CellFullWide.m in Sources */,
-				74732C8D17C522C6006747C7 /* CellTextField.m in Sources */,
-				74732C8E17C522C6006747C7 /* CellTextView.m in Sources */,
-				74732C8F17C522C6006747C7 /* DisplayCell.m in Sources */,
-				74732C9017C522C6006747C7 /* EditableTableViewCell.m in Sources */,
-				74732C9117C522C6006747C7 /* SliderCell.m in Sources */,
-				74732C9217C522C6006747C7 /* SourceCell.m in Sources */,
-				74732C9317C522C6006747C7 /* ColorBoxPicker.m in Sources */,
-				74732C9417C522C6006747C7 /* ColorTouchPicker.m in Sources */,
-				74732C9517C522C6006747C7 /* LSColorDisplay.m in Sources */,
-				74732C9617C522C6006747C7 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
