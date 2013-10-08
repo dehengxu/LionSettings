@@ -68,54 +68,54 @@
 		74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		A2A7238A17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
-		A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
+		A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7238C17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
 		A2A7238D17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
-		A2A7238E17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
+		A2A7238E17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7238F17F928AF00B82D62 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
 		A2A7239017F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
-		A2A7239117F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
+		A2A7239117F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7239217F928AF00B82D62 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
 		A2A7239317F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
-		A2A7239417F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
+		A2A7239417F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7239517F928AF00B82D62 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
 		A2A7239617F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */; };
 		A2A7239717F928AF00B82D62 /* LlamaSettingsNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */; };
 		A2A7239817F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
-		A2A7239917F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
+		A2A7239917F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7239A17F928AF00B82D62 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
 		A2A7239B17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
-		A2A7239C17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
+		A2A7239C17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7239D17F928AF00B82D62 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
 		A2A7239E17F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
-		A2A7239F17F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
+		A2A7239F17F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723A017F928AF00B82D62 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
 		A2A723A117F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
-		A2A723A217F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
+		A2A723A217F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723A317F928AF00B82D62 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
 		A2A723A417F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
-		A2A723A517F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
+		A2A723A517F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723A617F928AF00B82D62 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
 		A2A723A717F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
-		A2A723A817F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
+		A2A723A817F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723A917F928AF00B82D62 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
 		A2A723AA17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
-		A2A723AB17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
+		A2A723AB17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723AC17F928AF00B82D62 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
 		A2A723AD17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
-		A2A723AE17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
+		A2A723AE17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723AF17F928AF00B82D62 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
 		A2A723B017F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
-		A2A723B117F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
+		A2A723B117F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723B217F928AF00B82D62 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
 		A2A723B317F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
-		A2A723B417F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
+		A2A723B417F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723B517F928AF00B82D62 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
 		A2A723B617F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
-		A2A723B717F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
+		A2A723B717F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723B817F928AF00B82D62 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
 		A2A723B917F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
-		A2A723BA17F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
+		A2A723BA17F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A723BB17F928AF00B82D62 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -906,7 +906,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -945,7 +945,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

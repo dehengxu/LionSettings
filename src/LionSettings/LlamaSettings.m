@@ -1021,7 +1021,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         }else if ([accessoryType isEqualToString:@"AccessoryDetailButton"]) {
             if ([UIDevice currentDevice].systemVersion.floatValue > 6.) {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_6_1
                 [cell setAccessoryType:UITableViewCellAccessoryDetailButton];
+#endif
             }else {
                 [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
             }
