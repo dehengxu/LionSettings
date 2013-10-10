@@ -14,9 +14,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WebViewController.h"
-#import "ColorHelper.h"
-#import "LSColorDisplay.h"
+#import "Views/WebViewController.h"
+#import "Helpers/ColorHelper.h"
+#import "Views/LSColorDisplay.h"
 
 @protocol LlamaSettingsDelegate;
 

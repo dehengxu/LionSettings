@@ -115,7 +115,7 @@
 - (void)buttonPressed:(NSString *)buttonKey inSettings:(LlamaSettings *)ls
 {
     //
-    NSLog(@"button key :%@", buttonKey);
+    NSLog(@"button key:%@", buttonKey);
     NSDictionary *element = [ls preferenceSpecifiersElementForKey:buttonKey];
     NSString *PSType = [ls PSTypeOfSettingsElement:element];
     
