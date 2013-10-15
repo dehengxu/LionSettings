@@ -58,11 +58,43 @@
 		74732C4F17C52230006747C7 /* libLionSettingsLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */; };
 		74732C5517C52230006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C5317C52230006747C7 /* InfoPlist.strings */; };
 		74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */; };
-		74732C6617C52250006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C6A17C52250006747C7 /* InfoPlist.strings */; };
-		74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
-		74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		A23B2A34180D305900C270A4 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
+		A23B2A35180D305900C270A4 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
+		A23B2A36180D305900C270A4 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
+		A23B2A37180D305900C270A4 /* LlamaSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236E17F928AF00B82D62 /* LlamaSettings.m */; };
+		A23B2A38180D305900C270A4 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237217F928AF00B82D62 /* ButtonCell.m */; };
+		A23B2A39180D305900C270A4 /* CellFullWide.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237417F928AF00B82D62 /* CellFullWide.m */; };
+		A23B2A3A180D305900C270A4 /* CellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237617F928AF00B82D62 /* CellTextField.m */; };
+		A23B2A3B180D305900C270A4 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237817F928AF00B82D62 /* CellTextView.m */; };
+		A23B2A3C180D305900C270A4 /* DisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237A17F928AF00B82D62 /* DisplayCell.m */; };
+		A23B2A3D180D305900C270A4 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237C17F928AF00B82D62 /* EditableTableViewCell.m */; };
+		A23B2A3E180D305900C270A4 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7237E17F928AF00B82D62 /* SliderCell.m */; };
+		A23B2A3F180D305900C270A4 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238017F928AF00B82D62 /* SourceCell.m */; };
+		A23B2A40180D305900C270A4 /* ColorBoxPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238317F928AF00B82D62 /* ColorBoxPicker.m */; };
+		A23B2A41180D305900C270A4 /* ColorTouchPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238517F928AF00B82D62 /* ColorTouchPicker.m */; };
+		A23B2A42180D305900C270A4 /* LSColorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238717F928AF00B82D62 /* LSColorDisplay.m */; };
+		A23B2A43180D305900C270A4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7238917F928AF00B82D62 /* WebViewController.m */; };
+		A23B2A44180D306A00C270A4 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7236517F928AF00B82D62 /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A45180D306A00C270A4 /* ColorHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7236717F928AF00B82D62 /* ColorHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A46180D306A00C270A4 /* LionMultiValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7236917F928AF00B82D62 /* LionMultiValuesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A47180D306A00C270A4 /* LionSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7236B17F928AF00B82D62 /* LionSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A48180D306A00C270A4 /* LlamaSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7236D17F928AF00B82D62 /* LlamaSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A49180D306A00C270A4 /* ButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237117F928AF00B82D62 /* ButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4A180D306A00C270A4 /* CellFullWide.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237317F928AF00B82D62 /* CellFullWide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4B180D306A00C270A4 /* CellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237517F928AF00B82D62 /* CellTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4C180D306A00C270A4 /* CellTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237717F928AF00B82D62 /* CellTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4D180D306A00C270A4 /* DisplayCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237917F928AF00B82D62 /* DisplayCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4E180D306A00C270A4 /* EditableTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237B17F928AF00B82D62 /* EditableTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A4F180D306A00C270A4 /* SliderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237D17F928AF00B82D62 /* SliderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A50180D306A00C270A4 /* SourceCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7237F17F928AF00B82D62 /* SourceCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A51180D306A00C270A4 /* ColorBoxPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7238217F928AF00B82D62 /* ColorBoxPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A52180D306A00C270A4 /* ColorTouchPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7238417F928AF00B82D62 /* ColorTouchPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A53180D306A00C270A4 /* LSColorDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7238617F928AF00B82D62 /* LSColorDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A54180D306A00C270A4 /* WebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A7238817F928AF00B82D62 /* WebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A5D180D327400C270A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A23B2A5B180D327400C270A4 /* InfoPlist.strings */; };
+		A2A565E6180D38A5000793AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		A2A565E7180D38AA000793AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		A2A565EE180D395B000793AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		A2A7238A17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
 		A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2A7238C17F928AF00B82D62 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
@@ -174,10 +206,14 @@
 		74732C5217C52230006747C7 /* LionSettingsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettingsLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		74732C5417C52230006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionSettingsLibraryTests.m; sourceTree = "<group>"; };
-		74732C6917C52250006747C7 /* LionSettings-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettings-Info.plist"; sourceTree = "<group>"; };
-		74732C6B17C52250006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettings-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A23B2A29180D302D00C270A4 /* LionSettings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A23B2A2C180D302E00C270A4 /* LionSettings-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettings-Info.plist"; sourceTree = "<group>"; };
+		A23B2A30180D302E00C270A4 /* LionSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettings-Prefix.pch"; sourceTree = "<group>"; };
+		A23B2A57180D312900C270A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A23B2A5C180D327400C270A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A23B2A5E180D328300C270A4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A23B2A60180D32CA00C270A4 /* LionSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionSettings.h; sourceTree = "<group>"; };
 		A2A7236517F928AF00B82D62 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		A2A7236717F928AF00B82D62 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
 		A2A7236817F928AF00B82D62 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
@@ -244,14 +280,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74732C6017C52250006747C7 /* Frameworks */ = {
+		A23B2A23180D302D00C270A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */,
-				74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */,
-				74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */,
-				74732C6617C52250006747C7 /* Foundation.framework in Frameworks */,
+				A2A565EE180D395B000793AF /* CoreGraphics.framework in Frameworks */,
+				A2A565E7180D38AA000793AF /* UIKit.framework in Frameworks */,
+				A2A565E6180D38A5000793AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +311,7 @@
 				1D6058910D05DD3D006BFB54 /* LSExample.app */,
 				74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */,
 				74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */,
+				A23B2A29180D302D00C270A4 /* LionSettings.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,7 +349,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				74732C3D17C5222F006747C7 /* LionSettingsLibrary */,
 				74732C5017C52230006747C7 /* LionSettingsLibraryTests */,
-				74732C6717C52250006747C7 /* LionSettings */,
+				A23B2A2A180D302E00C270A4 /* LionSettings */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -341,6 +377,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A23B2A5E180D328300C270A4 /* CFNetwork.framework */,
+				A23B2A57180D312900C270A4 /* QuartzCore.framework */,
 				5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -408,20 +446,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		74732C6717C52250006747C7 /* LionSettings */ = {
+		A23B2A2A180D302E00C270A4 /* LionSettings */ = {
 			isa = PBXGroup;
 			children = (
-				74732C6817C52250006747C7 /* Supporting Files */,
+				A23B2A2B180D302E00C270A4 /* Supporting Files */,
+				A23B2A60180D32CA00C270A4 /* LionSettings.h */,
 			);
 			path = LionSettings;
 			sourceTree = "<group>";
 		};
-		74732C6817C52250006747C7 /* Supporting Files */ = {
+		A23B2A2B180D302E00C270A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74732C6917C52250006747C7 /* LionSettings-Info.plist */,
-				74732C6A17C52250006747C7 /* InfoPlist.strings */,
-				74732C6D17C52250006747C7 /* LionSettings-Prefix.pch */,
+				A23B2A5B180D327400C270A4 /* InfoPlist.strings */,
+				A23B2A2C180D302E00C270A4 /* LionSettings-Info.plist */,
+				A23B2A30180D302E00C270A4 /* LionSettings-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -495,10 +534,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		74732C6117C52250006747C7 /* Headers */ = {
+		A23B2A24180D302D00C270A4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23B2A44180D306A00C270A4 /* Constants.h in Headers */,
+				A23B2A45180D306A00C270A4 /* ColorHelper.h in Headers */,
+				A23B2A46180D306A00C270A4 /* LionMultiValuesViewController.h in Headers */,
+				A23B2A47180D306A00C270A4 /* LionSettingsViewController.h in Headers */,
+				A23B2A48180D306A00C270A4 /* LlamaSettings.h in Headers */,
+				A23B2A49180D306A00C270A4 /* ButtonCell.h in Headers */,
+				A23B2A4A180D306A00C270A4 /* CellFullWide.h in Headers */,
+				A23B2A4B180D306A00C270A4 /* CellTextField.h in Headers */,
+				A23B2A4C180D306A00C270A4 /* CellTextView.h in Headers */,
+				A23B2A4D180D306A00C270A4 /* DisplayCell.h in Headers */,
+				A23B2A4E180D306A00C270A4 /* EditableTableViewCell.h in Headers */,
+				A23B2A4F180D306A00C270A4 /* SliderCell.h in Headers */,
+				A23B2A50180D306A00C270A4 /* SourceCell.h in Headers */,
+				A23B2A51180D306A00C270A4 /* ColorBoxPicker.h in Headers */,
+				A23B2A52180D306A00C270A4 /* ColorTouchPicker.h in Headers */,
+				A23B2A53180D306A00C270A4 /* LSColorDisplay.h in Headers */,
+				A23B2A54180D306A00C270A4 /* WebViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,17 +613,17 @@
 			productReference = 74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		74732C6517C52250006747C7 /* LionSettings */ = {
+		A23B2A28180D302D00C270A4 /* LionSettings */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74732C6E17C52250006747C7 /* Build configuration list for PBXNativeTarget "LionSettings" */;
+			buildConfigurationList = A23B2A31180D302E00C270A4 /* Build configuration list for PBXNativeTarget "LionSettings" */;
 			buildPhases = (
-				74732C5E17C52250006747C7 /* ShellScript */,
-				74732C5F17C52250006747C7 /* Sources */,
-				74732C6017C52250006747C7 /* Frameworks */,
-				74732C6117C52250006747C7 /* Headers */,
-				74732C6217C52250006747C7 /* Resources */,
-				74732C6317C52250006747C7 /* ShellScript */,
-				74732C6417C52250006747C7 /* ShellScript */,
+				A23B2A21180D302D00C270A4 /* ShellScript */,
+				A23B2A22180D302D00C270A4 /* Sources */,
+				A23B2A23180D302D00C270A4 /* Frameworks */,
+				A23B2A24180D302D00C270A4 /* Headers */,
+				A23B2A25180D302D00C270A4 /* Resources */,
+				A23B2A26180D302D00C270A4 /* ShellScript */,
+				A23B2A27180D302D00C270A4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -575,7 +631,8 @@
 			);
 			name = LionSettings;
 			productName = LionSettings;
-			productType = "com.apple.product-type.framework.static";
+			productReference = A23B2A29180D302D00C270A4 /* LionSettings.framework */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -609,7 +666,7 @@
 				1D6058900D05DD3D006BFB54 /* LSExample */,
 				74732C3A17C5222F006747C7 /* LionSettingsLibrary */,
 				74732C4717C52230006747C7 /* LionSettingsLibraryTests */,
-				74732C6517C52250006747C7 /* LionSettings */,
+				A23B2A28180D302D00C270A4 /* LionSettings */,
 				A261682017CEDE4C00904EF4 /* LionSettingsDocset */,
 				A261682517CEE87600904EF4 /* DoxygenLionSettingsDocset */,
 			);
@@ -641,18 +698,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74732C6217C52250006747C7 /* Resources */ = {
+		A23B2A25180D302D00C270A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */,
+				A23B2A5D180D327400C270A4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		74732C5E17C52250006747C7 /* ShellScript */ = {
+		A23B2A21180D302D00C270A4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -663,9 +720,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
 		};
-		74732C6317C52250006747C7 /* ShellScript */ = {
+		A23B2A26180D302D00C270A4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -678,7 +735,7 @@
 			shellPath = /bin/sh;
 			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
 		};
-		74732C6417C52250006747C7 /* ShellScript */ = {
+		A23B2A27180D302D00C270A4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -689,7 +746,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\nif [[ \"$XCODE_VERSION_MAJOR\" == \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
 		};
 		A261682417CEDE6600904EF4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -798,10 +855,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74732C5F17C52250006747C7 /* Sources */ = {
+		A23B2A22180D302D00C270A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23B2A34180D305900C270A4 /* ColorHelper.m in Sources */,
+				A23B2A35180D305900C270A4 /* LionMultiValuesViewController.m in Sources */,
+				A23B2A36180D305900C270A4 /* LionSettingsViewController.m in Sources */,
+				A23B2A37180D305900C270A4 /* LlamaSettings.m in Sources */,
+				A23B2A38180D305900C270A4 /* ButtonCell.m in Sources */,
+				A23B2A39180D305900C270A4 /* CellFullWide.m in Sources */,
+				A23B2A3A180D305900C270A4 /* CellTextField.m in Sources */,
+				A23B2A3B180D305900C270A4 /* CellTextView.m in Sources */,
+				A23B2A3C180D305900C270A4 /* DisplayCell.m in Sources */,
+				A23B2A3D180D305900C270A4 /* EditableTableViewCell.m in Sources */,
+				A23B2A3E180D305900C270A4 /* SliderCell.m in Sources */,
+				A23B2A3F180D305900C270A4 /* SourceCell.m in Sources */,
+				A23B2A40180D305900C270A4 /* ColorBoxPicker.m in Sources */,
+				A23B2A41180D305900C270A4 /* ColorTouchPicker.m in Sources */,
+				A23B2A42180D305900C270A4 /* LSColorDisplay.m in Sources */,
+				A23B2A43180D305900C270A4 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,10 +897,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		74732C6A17C52250006747C7 /* InfoPlist.strings */ = {
+		A23B2A5B180D327400C270A4 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74732C6B17C52250006747C7 /* en */,
+				A23B2A5C180D327400C270A4 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1044,14 +1117,15 @@
 			};
 			name = Release;
 		};
-		74732C6F17C52250006747C7 /* Debug */ = {
+		A23B2A32180D302E00C270A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1060,11 +1134,13 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1074,28 +1150,33 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "LionSettings/LionSettings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
-		74732C7017C52250006747C7 /* Release */ = {
+		A23B2A33180D302E00C270A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1104,24 +1185,30 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LionSettings/LionSettings-Prefix.pch";
-				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "LionSettings/LionSettings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1218,11 +1305,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74732C6E17C52250006747C7 /* Build configuration list for PBXNativeTarget "LionSettings" */ = {
+		A23B2A31180D302E00C270A4 /* Build configuration list for PBXNativeTarget "LionSettings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74732C6F17C52250006747C7 /* Debug */,
-				74732C7017C52250006747C7 /* Release */,
+				A23B2A32180D302E00C270A4 /* Debug */,
+				A23B2A33180D302E00C270A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
