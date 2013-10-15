@@ -50,7 +50,6 @@
 		5EEB72AA0FC31E070052FAA7 /* mySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72A90FC31E070052FAA7 /* mySettings.plist */; };
 		5EEB72BF0FC31F630052FAA7 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72BE0FC31F630052FAA7 /* example.html */; };
 		7420AA3717C51F7F00776F9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7420AA3617C51F7F00776F9B /* Settings.bundle */; };
-		74732C3C17C5222F006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74732C4017C5222F006747C7 /* LionSettingsLibrary.h */; };
 		74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C4217C5222F006747C7 /* LionSettingsLibrary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74732C4A17C52230006747C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C4917C52230006747C7 /* XCTest.framework */; };
@@ -61,9 +60,6 @@
 		74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */; };
 		74732C6617C52250006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		74732C6C17C52250006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C6A17C52250006747C7 /* InfoPlist.strings */; };
-		74732C8117C5227F006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
-		74732C8217C52283006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
-		74732C8317C52289006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C8417C522AE006747C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2FCF620FC3B70500A1E9EF /* MediaPlayer.framework */; };
 		74732C8517C522B2006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C8617C522B6006747C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
@@ -234,10 +230,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74732C8317C52289006747C7 /* UIKit.framework in Frameworks */,
-				74732C8217C52283006747C7 /* CoreGraphics.framework in Frameworks */,
-				74732C8117C5227F006747C7 /* MediaPlayer.framework in Frameworks */,
-				74732C3C17C5222F006747C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
