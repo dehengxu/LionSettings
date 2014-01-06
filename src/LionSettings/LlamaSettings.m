@@ -417,6 +417,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
     theDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    self.stringsTableName = [theDictionary valueForKey:@"StringsTable"];
     
     if( theDictionary == nil ) {
         NSLog( @"Error loading!" );
@@ -663,7 +664,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (NSString *) titleOfRow:(int)row inSection:(int)section
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
- 	return [aSpecifier valueForKey:@"Title"];
+    NSLog(@"%@,  %@,   %@", self.stringsTableName, [aSpecifier valueForKey:@"Title"], NSLocalizedStringFromTable([aSpecifier valueForKey:@"Title"], self.stringsTableName, nil));
+ 	return NSLocalizedStringFromTable([aSpecifier valueForKey:@"Title"], self.stringsTableName, nil);//[aSpecifier valueForKey:@"Title"];
 }
 
 - (NSString *) propertyForRow:(int)row inSection:(int)section ofProperty:(NSString *)property
@@ -876,7 +878,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	// return the content
 	NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:idx];
-	return [aSpecifier valueForKey:@"Title"];
+	return NSLocalizedStringFromTable(@"Title", self.stringsTableName, nil);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

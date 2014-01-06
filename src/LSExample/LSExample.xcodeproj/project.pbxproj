@@ -49,15 +49,23 @@
 		5E6730700F85B2EB0094A5B9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E67306F0F85B2EB0094A5B9 /* Icon.png */; };
 		5EEB72AA0FC31E070052FAA7 /* mySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72A90FC31E070052FAA7 /* mySettings.plist */; };
 		5EEB72BF0FC31F630052FAA7 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB72BE0FC31F630052FAA7 /* example.html */; };
+		740BD0D418617C6D0058F46F /* Constants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236517F928AF00B82D62 /* Constants.h */; };
+		740BD0D518617C6D0058F46F /* ColorHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236717F928AF00B82D62 /* ColorHelper.h */; };
+		740BD0D618617C6D0058F46F /* LionMultiValuesViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236917F928AF00B82D62 /* LionMultiValuesViewController.h */; };
+		740BD0D718617C6D0058F46F /* LionSettingsViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236B17F928AF00B82D62 /* LionSettingsViewController.h */; };
+		740BD0D818617C6E0058F46F /* LlamaSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236D17F928AF00B82D62 /* LlamaSettings.h */; };
+		740BD0D918617C6E0058F46F /* ColorBoxPicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7238217F928AF00B82D62 /* ColorBoxPicker.h */; };
+		740BD0DA18617C6E0058F46F /* ColorTouchPicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7238417F928AF00B82D62 /* ColorTouchPicker.h */; };
+		740BD0DB18617C6E0058F46F /* LSColorDisplay.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7238617F928AF00B82D62 /* LSColorDisplay.h */; };
+		740BD0DC18617C6E0058F46F /* WebViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7238817F928AF00B82D62 /* WebViewController.h */; };
 		7420AA3717C51F7F00776F9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7420AA3617C51F7F00776F9B /* Settings.bundle */; };
-		74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74732C4017C5222F006747C7 /* LionSettingsLibrary.h */; };
-		74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C4217C5222F006747C7 /* LionSettingsLibrary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74732C4A17C52230006747C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C4917C52230006747C7 /* XCTest.framework */; };
 		74732C4B17C52230006747C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		74732C4C17C52230006747C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		74732C4F17C52230006747C7 /* libLionSettingsLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */; };
 		74732C5517C52230006747C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74732C5317C52230006747C7 /* InfoPlist.strings */; };
 		74732C5717C52230006747C7 /* LionSettingsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */; };
+		74E49519186BCDB600C13D52 /* LlamaSettingsNotes.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A7236F17F928AF00B82D62 /* LlamaSettingsNotes.txt */; };
 		A23B2A34180D305900C270A4 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236817F928AF00B82D62 /* ColorHelper.m */; };
 		A23B2A35180D305900C270A4 /* LionMultiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236A17F928AF00B82D62 /* LionMultiValuesViewController.m */; };
 		A23B2A36180D305900C270A4 /* LionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7236C17F928AF00B82D62 /* LionSettingsViewController.m */; };
@@ -164,7 +172,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				74732C4117C5222F006747C7 /* LionSettingsLibrary.h in CopyFiles */,
+				74E49519186BCDB600C13D52 /* LlamaSettingsNotes.txt in CopyFiles */,
+				740BD0D418617C6D0058F46F /* Constants.h in CopyFiles */,
+				740BD0D518617C6D0058F46F /* ColorHelper.h in CopyFiles */,
+				740BD0D618617C6D0058F46F /* LionMultiValuesViewController.h in CopyFiles */,
+				740BD0D718617C6D0058F46F /* LionSettingsViewController.h in CopyFiles */,
+				740BD0D818617C6E0058F46F /* LlamaSettings.h in CopyFiles */,
+				740BD0D918617C6E0058F46F /* ColorBoxPicker.h in CopyFiles */,
+				740BD0DA18617C6E0058F46F /* ColorTouchPicker.h in CopyFiles */,
+				740BD0DB18617C6E0058F46F /* LSColorDisplay.h in CopyFiles */,
+				740BD0DC18617C6E0058F46F /* WebViewController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,13 +216,14 @@
 		7420AA3617C51F7F00776F9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		74732C3B17C5222F006747C7 /* libLionSettingsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLionSettingsLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74732C3F17C5222F006747C7 /* LionSettingsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LionSettingsLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		74732C4017C5222F006747C7 /* LionSettingsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionSettingsLibrary.h; sourceTree = "<group>"; };
-		74732C4217C5222F006747C7 /* LionSettingsLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionSettingsLibrary.m; sourceTree = "<group>"; };
 		74732C4817C52230006747C7 /* LionSettingsLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionSettingsLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74732C4917C52230006747C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		74732C5217C52230006747C7 /* LionSettingsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettingsLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		74732C5417C52230006747C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74732C5617C52230006747C7 /* LionSettingsLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionSettingsLibraryTests.m; sourceTree = "<group>"; };
+		74D65653187A984900CEDAD3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		74D65654187A984900CEDAD3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		74E4953D186BCF3A00C13D52 /* LionSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionSettings.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23B2A29180D302D00C270A4 /* LionSettings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23B2A2C180D302E00C270A4 /* LionSettings-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LionSettings-Info.plist"; sourceTree = "<group>"; };
@@ -413,9 +431,8 @@
 		74732C3D17C5222F006747C7 /* LionSettingsLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				74732C4017C5222F006747C7 /* LionSettingsLibrary.h */,
-				74732C4217C5222F006747C7 /* LionSettingsLibrary.m */,
 				74732C3E17C5222F006747C7 /* Supporting Files */,
+				74E4953D186BCF3A00C13D52 /* LionSettings.h */,
 			);
 			path = LionSettingsLibrary;
 			sourceTree = "<group>";
@@ -658,6 +675,7 @@
 				French,
 				German,
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -818,7 +836,6 @@
 				A2A7239917F928AF00B82D62 /* ButtonCell.m in Sources */,
 				A2A7239117F928AF00B82D62 /* LionSettingsViewController.m in Sources */,
 				A2A7239F17F928AF00B82D62 /* CellTextField.m in Sources */,
-				74732C4317C5222F006747C7 /* LionSettingsLibrary.m in Sources */,
 				A2A723BA17F928AF00B82D62 /* WebViewController.m in Sources */,
 				A2A7238B17F928AF00B82D62 /* ColorHelper.m in Sources */,
 				A2A723AE17F928AF00B82D62 /* SourceCell.m in Sources */,
@@ -893,6 +910,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74732C5417C52230006747C7 /* en */,
+				74D65653187A984900CEDAD3 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -901,6 +919,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A23B2A5C180D327400C270A4 /* en */,
+				74D65654187A984900CEDAD3 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -942,6 +961,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -974,6 +994,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./LionSettings,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
@@ -991,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -1017,6 +1039,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./LionSettings,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (

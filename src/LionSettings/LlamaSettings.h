@@ -37,11 +37,12 @@ UIActionSheetDelegate, BLColorDisplayDelegate>
 	BOOL beginWithOutGroupIdentifier;
     
 	//NSAutoreleasePool *nsap;
+
 }
 
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, assign) UIViewController * viewController;
-
+@property (nonatomic, strong) NSString *stringsTableName;
 @property (nonatomic, assign) BOOL valid;
 
 + (LlamaSettings *)sharedSettings;

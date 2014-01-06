@@ -128,6 +128,11 @@
         lmvvc.value = [self.ls settingsValueForKey:buttonKey];
         self.multiValuesView = lmvvc;
         self.multiValuesView.title = [element valueForKey:@"Title"];
+        
+        if (!self.navigationController) {
+            NSLog(@"You need a UINavigationController container!");
+        }
+        
         [self.navigationController pushViewController:self.multiValuesView animated:YES];
     }
     
