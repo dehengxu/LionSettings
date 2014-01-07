@@ -29,6 +29,9 @@
 static LlamaSettings *_sharedLlamaSettings = nil;
 
 @interface LlamaSettings ()
+
+@property (nonatomic, strong) NSBundle *settingsBundle;
+
 - (NSDictionary *) itemForKey:(NSString *)key;
 - (void)OpenWebWindowWithURL:(NSString *)theURL restrictive:(BOOL)rst withTitle:(NSString *)title preload:(BOOL)_preload;
 @end
@@ -38,6 +41,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 @synthesize delegate;
 @synthesize viewController;
 @synthesize valid;
+@synthesize settingsBundle = _settingsBundle;
 
 - (id) initWithPlist:(NSString *)plistName
 {
@@ -549,6 +553,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (void)loadHeirarchyFromSettingsBundle:(NSString *)bundleName andPlistName:(NSString *)plistName
 {
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:nil];
+    
+    self.settingsBundle = [NSBundle bundleWithPath:bundlePath];
     [self loadHeirarchyFromPlistPath:[NSString stringWithFormat:@"%@/%@", bundlePath, plistName]];
 }
 
@@ -664,8 +670,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 - (NSString *) titleOfRow:(int)row inSection:(int)section
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
-    NSLog(@"%@,  %@,   %@", self.stringsTableName, [aSpecifier valueForKey:@"Title"], NSLocalizedStringFromTable([aSpecifier valueForKey:@"Title"], self.stringsTableName, nil));
- 	return NSLocalizedStringFromTable([aSpecifier valueForKey:@"Title"], self.stringsTableName, nil);//[aSpecifier valueForKey:@"Title"];
+    NSLog(@"%@,  %@,   %@", self.stringsTableName, [aSpecifier valueForKey:@"Title"], NSLocalizedStringFromTableInBundle(@"Title", self.stringsTableName, self.settingsBundle, nil));
+ 	return NSLocalizedStringFromTableInBundle([aSpecifier valueForKey:@"Title"], self.stringsTableName, self.settingsBundle, nil);
 }
 
 - (NSString *) propertyForRow:(int)row inSection:(int)section ofProperty:(NSString *)property
@@ -878,7 +884,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	// return the content
 	NSDictionary * aSpecifier = [preferenceSpecifiers objectAtIndex:idx];
-	return NSLocalizedStringFromTable(@"Title", self.stringsTableName, nil);
+//	return NSLocalizedStringFromTable(@"Title", , self.stringsTableName, nil);
+//    NSLog(@"Group :%@", [aSpecifier valueForKey:@"Title"]);
+    return NSLocalizedStringFromTableInBundle([aSpecifier valueForKey:@"Title"], self.stringsTableName, self.settingsBundle, nil);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

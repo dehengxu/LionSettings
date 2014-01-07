@@ -142,7 +142,8 @@
 {
     //Only load plist in the same bundle.
     LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:_bundleName andPlistName:[aSpecifiers valueForKey:@"File"]] autorelease];
-    [lsvc setTitle:[aSpecifiers valueForKey:@"Title"]];
+    
+    [lsvc setTitle:NSLocalizedStringFromTableInBundle([aSpecifiers valueForKey:@"Title"], ls.stringsTableName, ls.settingsBundle, nil)];
     [self.navigationController pushViewController:lsvc animated:YES];
 }
 
