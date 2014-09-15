@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LionSettings"
-  s.version      = "0.0.1"
+  s.version      = "0.1"
   s.summary      = "LionSettings is a settings framework for iOS, it can adapt in app UI."
 
   s.description  = <<-DESC
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:xudeheng/LionSettings.git", :tag => "0.0.1" }
+  s.source       = { :git => "http://admin@localhost:8080/gitblit/r/LionSettings.git", :tag => "0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
