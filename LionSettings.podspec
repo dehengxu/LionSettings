@@ -78,8 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://admin@localhost:8080/gitblit/r/LionSettings.git", :tag => >>>>>>> 1a3312c8a26e15fce257519b2844293aca94c4d0
-
+  s.source       = { :git => "http://admin@localhost:8080/gitblit/r/LionSettings.git", :tag => 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
