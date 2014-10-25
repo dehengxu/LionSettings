@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LionSettings"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of LionSettings."
+  s.version      = "0.1"
+  s.summary      = "LionSettings is a settings framework for iOS, it can adapt in app UI."
 
   s.description  = <<-DESC
                    A longer description of LionSettings in Markdown format.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://EXAMPLE/LionSettings"
+  s.homepage     = "git@github.com:xudeheng/LionSettings.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,11 +52,11 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-  
-  s.author             = { "xudeheng" => "dehengxu@outlook.com" }
-  # Or just: s.author    = "xudeheng"
-  # s.authors            = { "xudeheng" => "dehengxu@outlook.com" }
-  # s.social_media_url   = "http://twitter.com/xudeheng"
+
+  s.author             = { "DehengXu" => "dehengxu@outlook.com" }
+  # Or just: s.author    = "DehengXu"
+  # s.authors            = { "DehengXu" => "dehengxu@outlook.com" }
+  # s.social_media_url   = "http://twitter.com/DehengXu"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/LionSettings.git", :tag => "0.0.1" }
+  s.source       = { :git => "http://admin@localhost:8080/gitblit/r/LionSettings.git", :tag => >>>>>>> 1a3312c8a26e15fce257519b2844293aca94c4d0
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "src/LionSettings", "src/LionSettings/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
