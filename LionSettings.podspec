@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LionSettings"
-  s.version      = "0.1"
+  s.version      = "1.1.0"
   s.summary      = "LionSettings is a settings framework for iOS, it can adapt in app UI."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:xudeheng/LionSettings.git", :tag => "0.1" }
+  s.source       = { :git => "git@github.com:xudeheng/LionSettings.git", :tag => "1.1.0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
