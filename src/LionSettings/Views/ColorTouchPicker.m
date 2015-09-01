@@ -211,7 +211,10 @@
 	[UIView beginAnimations:@"FadeOutTouchColorPIcker" context:nil];
 	[UIView setAnimationBeginsFromCurrentState:YES];
 	[UIView setAnimationDelegate:self.view];
-	[UIView setAnimationDidStopSelector:@selector( removeFromSuperview: )];
+    //Mod : 20150901 by DehengXu
+	//[UIView setAnimationDidStopSelector:@selector( removeFromSuperview: )];
+    [UIView setAnimationDidStopSelector:@selector(removeView:)];
+    
 	[UIView setAnimationDuration:0.3];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
 	[self.view setCenter:newCenter];

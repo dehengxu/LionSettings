@@ -577,7 +577,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     return totalSect + (beginWithOutGroupIdentifier ? 1 : 0);
 }
 
-- (int) indexOfSection:(int)sectno inSpecifierDictionary:(NSArray *)preferenceSpecifiers
+- (int) indexOfSection:(NSInteger)sectno inSpecifierDictionary:(NSArray *)preferenceSpecifiers
 {
 	if( !preferenceSpecifiers ) return -1;
 	if( sectno < 0 ) return -1;
@@ -632,7 +632,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 }
 
 
-- (NSObject *) itemAtRow:(int)row inSection:(int)section
+- (NSObject *) itemAtRow:(NSInteger)row inSection:(NSInteger)section
 {
 	NSArray *preferenceSpecifiers = [theDictionary valueForKey:@"PreferenceSpecifiers"];
 	
@@ -667,20 +667,20 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 }
 
 
-- (NSString *) titleOfRow:(int)row inSection:(int)section
+- (NSString *) titleOfRow:(NSInteger)row inSection:(NSInteger)section
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
     NSLog(@"%@,  %@,   %@", self.stringsTableName, [aSpecifier valueForKey:@"Title"], NSLocalizedStringFromTableInBundle(@"Title", self.stringsTableName, self.settingsBundle, nil));
  	return NSLocalizedStringFromTableInBundle([aSpecifier valueForKey:@"Title"], self.stringsTableName, self.settingsBundle, nil);
 }
 
-- (NSString *) propertyForRow:(int)row inSection:(int)section ofProperty:(NSString *)property
+- (NSString *) propertyForRow:(NSInteger)row inSection:(NSInteger)section ofProperty:(NSString *)property
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
 	return [aSpecifier valueForKey:property];
 }
 
-- (NSString *) propertyForRow:(int)row inSection:(int)section ofProperty:(NSString *)propertyMain orFallBackOnProperty:(NSString *)propertyBackup
+- (NSString *) propertyForRow:(NSInteger)row inSection:(NSInteger)section ofProperty:(NSString *)propertyMain orFallBackOnProperty:(NSString *)propertyBackup
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
 	
@@ -692,14 +692,14 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 }
 
 
-- (BOOL) boolForRow:(int)row inSection:(int)section ofProperty:(NSString *)property
+- (BOOL) boolForRow:(NSInteger)row inSection:(NSInteger)section ofProperty:(NSString *)property
 {
 
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
 	return [[aSpecifier objectForKey:property] boolValue];
 }
 
-- (UIView *) widgetForRow:(int)row inSection:(int)section
+- (UIView *) widgetForRow:(NSInteger)row inSection:(NSInteger)section
 {
 	NSDictionary * aSpecifier =	(NSDictionary *)[self itemAtRow:row inSection:section];
 	NSString *key = [aSpecifier valueForKey:@"Key"];
@@ -953,7 +953,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	   || [type isEqualToString:@"PSTextFieldSpecifier"]
        || [type isEqualToString:@"PSMultiValueSpecifier"])
 	{
-		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		((DisplayCell *)cell).view = widg;
 		
@@ -969,7 +971,9 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	}
     
     if ([type isEqualToString:@"BLColorPickerSpecifier"]) {
-		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		((DisplayCell *)cell).view = widg;
 		
@@ -983,7 +987,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     }
     
     if ([type isEqualToString:@"PSChildPaneSpecifier"]) {
-		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
@@ -996,7 +1001,8 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 
 	if( [type isEqualToString:@"BLVolumeSpecifier"] )
 	{
-		cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[DisplayCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 		((DisplayCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		
 		CGRect frame = CGRectMake(0.0, 0.0, kSliderWidth, kSliderHeight);
@@ -1008,14 +1014,16 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	
 	if(	[type isEqualToString:@"BLSegmentedSpecifier"] )
 	{
-		cell = [[[CellFullWide alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[CellFullWide alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 		((CellFullWide *)cell).view = widg;	
 	}
 	
 	if([type isEqualToString:@"BLFullButtonSpecifier"]
 	   || [type isEqualToString:@"BLURLButtonSpecifier"])
 	{
-		cell = [[[ButtonCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+		//cell = [[[ButtonCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
+        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 
 		((ButtonCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
 		[(ButtonCell *)cell layoutSubviews];
@@ -1238,12 +1246,12 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     NSLog(@"pre :%@\n\n\n\n", [preferenceSpecifiers classForCoder]);
     
     testid = [self indexOfSection:0 inSpecifierDictionary:preferenceSpecifiers];
-    NSLog(@"testid :%d", testid);
+    NSLog(@"testid :%ld", (long)testid);
     testid = [self indexOfSection:1 inSpecifierDictionary:preferenceSpecifiers];
-    NSLog(@"testid :%d", testid);
+    NSLog(@"testid :%ld", (long)testid);
     
     testid = [self numberOfSectionsInSpecifierDictionary:preferenceSpecifiers];
-    NSLog(@"testid :%d", testid);
+    NSLog(@"testid :%ld", (long)testid);
     
     
     NSLog(@"\n\n\n\n");
