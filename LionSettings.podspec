@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LionSettings"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "LionSettings is a settings framework for iOS, it can adapt in app UI."
 
   s.description  = <<-DESC
@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/xudeheng/LionSettings.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/xudeheng/LionSettings.git", :tag => "1.1.1" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "src/LionSettings", "src/LionSettings/**/*.{h,m}"
+  s.source_files  = "src/LionSettings", "src/LionSettings/**/*.{h,m,mm,txt,mk}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
