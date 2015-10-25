@@ -2,60 +2,250 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Title</key>
+	<string>Example Content</string>
+	<key>StringsTable</key>
+	<string>mySettings</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>Title</key>
-			<string>Group</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Standard Controls</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>BLSegmentedSpecifier</string>
+			<key>Key</key>
+			<string>pSegmented</string>
+			<key>DefaultValue</key>
+			<string>0</string>
+			<key>Titles</key>
+			<array>
+				<string>Item A</string>
+				<string>Thing B</string>
+				<string>Foo 3</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLVolumeSpecifier</string>
+			<key>Title</key>
+			<string>Volume</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Text</string>
+			<key>Key</key>
+			<string>pText</string>
+			<key>DefaultValue</key>
+			<string>Hello</string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
 			<string>None</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
-			<key>Key</key>
-			<string>name_preference</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>Title</key>
-			<string>Name</string>
+		</dict>
+		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Sekkrit!</string>
+			<key>Key</key>
+			<string>pText2</string>
+			<key>DefaultValue</key>
+			<string>Hello</string>
+			<key>IsSecure</key>
+			<true/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
 		</dict>
 		<dict>
-			<key>DefaultValue</key>
-			<true/>
-			<key>Key</key>
-			<string>enabled_preference</string>
-			<key>Title</key>
-			<string>Enabled</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>A Switch</string>
+			<key>Key</key>
+			<string>pSwitch1</string>
+			<key>DefaultValue</key>
+			<false/>
 		</dict>
 		<dict>
-			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>Key</key>
-			<string>slider_preference</string>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MaximumValueImage</key>
-			<string></string>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Another Switch</string>
+			<key>Key</key>
+			<string>pSwitch2</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Color Selectors</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLColorPickerSpecifier</string>
+			<key>Title</key>
+			<string>Color - 1 Col</string>
+			<key>Key</key>
+			<string>pColor</string>
+			<key>DefaultValue</key>
+			<string>0, 255, 255</string>
+			<key>PickerType</key>
+			<string>Color1Column</string>
+			<key>ColorValues</key>
+			<array>
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0.0, 0.0, 1.0</string>
+				<string>1.0, 0.0, 0.95</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLColorPickerSpecifier</string>
+			<key>Title</key>
+			<string>Color - 2 Col</string>
+			<key>Key</key>
+			<string>pColor2</string>
+			<key>DefaultValue</key>
+			<string>0, 255, 255</string>
+			<key>PickerType</key>
+			<string>Color2Columns</string>
+			<key>ColorValues</key>
+			<array>
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0, 0, 255</string>
+				<string>255, 0, 255</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLColorPickerSpecifier</string>
+			<key>Title</key>
+			<string>Color - List</string>
+			<key>Key</key>
+			<string>pColor3</string>
+			<key>DefaultValue</key>
+			<string>0, 255, 255</string>
+			<key>PickerType</key>
+			<string>TextualList</string>
+			<key>ColorValues</key>
+			<array>
+				<string>255, 255, 255</string>
+				<string>255, 0, 0</string>
+				<string>255, 128, 0</string>
+				<string>255, 255, 0</string>
+				<string>0, 255, 0</string>
+				<string>0, 255, 255</string>
+				<string>0, 0, 255</string>
+				<string>255, 0, 255</string>
+			</array>
+			<key>ColorNames</key>
+			<array>
+				<string>White</string>
+				<string>Red</string>
+				<string>Orange</string>
+				<string>Yellow</string>
+				<string>Green</string>
+				<string>Cyan</string>
+				<string>Blue</string>
+				<string>Purple</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLColorPickerSpecifier</string>
+			<key>Title</key>
+			<string>Color - Touch</string>
+			<key>Key</key>
+			<string>pColor4</string>
+			<key>DefaultValue</key>
+			<string>255, 50, 127</string>
+			<key>PickerType</key>
+			<string>Touch</string>
+			<key>Legend</key>
+			<string>Touch/drag to pick a color</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Buttons</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLFullButtonSpecifier</string>
+			<key>Title</key>
+			<string>Full Width Button</string>
+			<key>Key</key>
+			<string>pButton</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLURLButtonSpecifier</string>
+			<key>Title</key>
+			<string>Example.HTML</string>
+			<key>Key</key>
+			<string>example.html</string>
+			<key>ExternalLaunch</key>
+			<false/>
+			<key>Restrictive</key>
+			<true/>
+			<key>Preload</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLURLButtonSpecifier</string>
+			<key>Title</key>
+			<string>My Website</string>
+			<key>Key</key>
+			<string>http://umlautllama.com</string>
+			<key>ExternalLaunch</key>
+			<true/>
+			<key>Restrictive</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>BLURLButtonSpecifier</string>
+			<key>Title</key>
+			<string>eMail Me</string>
+			<key>Key</key>
+			<string>mailto:yorgle@gmail.com</string>
+			<key>ExternalLaunch</key>
+			<true/>
+			<key>Restrictive</key>
+			<true/>
 		</dict>
 	</array>
-	<key>StringsTable</key>
-	<string>Root</string>
 </dict>
 </plist>

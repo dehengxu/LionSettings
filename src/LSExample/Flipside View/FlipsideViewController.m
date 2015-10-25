@@ -19,7 +19,8 @@
     self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
     
 	// LLAMASETTINGS 3:  Make the connections to and from it
-	ls = [[LlamaSettings alloc] initWithPlist:@"mySettings.plist"];
+	//ls = [[LlamaSettings alloc] initWithPlist:@"mySettings.plist"];
+    ls = [[LlamaSettings alloc] initWithSettingsBundle:@"Settings.bundle" andPlistName:@"Root.plist"];
 	[ls setDelegate:self];
 	[theTableView setDataSource:ls];
 	[theTableView setDelegate:ls];

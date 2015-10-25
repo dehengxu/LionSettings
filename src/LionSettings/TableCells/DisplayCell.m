@@ -20,6 +20,23 @@ NSString *kDisplayCell_ID = @"DisplayCell_ID";
 @synthesize nameLabel;
 @synthesize view;
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        // turn off selection use
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        nameLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        nameLabel.backgroundColor = [UIColor clearColor];
+        nameLabel.opaque = NO;
+        nameLabel.textColor = [UIColor blackColor];
+        nameLabel.highlightedTextColor = [UIColor blackColor];
+        nameLabel.font = [UIFont boldSystemFontOfSize:18];
+        [self.contentView addSubview:nameLabel];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)aRect reuseIdentifier:(NSString *)identifier
 {
 	if (self = [super initWithFrame:aRect reuseIdentifier:identifier])

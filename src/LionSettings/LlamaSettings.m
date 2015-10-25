@@ -948,7 +948,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
     //----------------------------  Build in control
 	if([type isEqualToString:@"PSToggleSwitchSpecifier"]
 	   || [type isEqualToString:@"PSSliderSpecifier"]
-	   //|| [type isEqualToString:@"BLColorPickerSpecifier"]
+	   || [type isEqualToString:@"BLColorPickerSpecifier"]
 	   || [type isEqualToString:@"PSTitleValueSpecifier"]
 	   || [type isEqualToString:@"PSTextFieldSpecifier"]
        || [type isEqualToString:@"PSMultiValueSpecifier"])
@@ -1015,7 +1015,7 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	if(	[type isEqualToString:@"BLSegmentedSpecifier"] )
 	{
 		//cell = [[[CellFullWide alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
-        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell = [[CellFullWide alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 		((CellFullWide *)cell).view = widg;	
 	}
 	
@@ -1023,9 +1023,12 @@ static LlamaSettings *_sharedLlamaSettings = nil;
 	   || [type isEqualToString:@"BLURLButtonSpecifier"])
 	{
 		//cell = [[[ButtonCell alloc] initWithFrame:CGRectZero reuseIdentifier:0] autorelease];
-        cell = [[DisplayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell = [[ButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 
 		((ButtonCell *)cell).nameLabel.text = [self titleOfRow:[indexPath row] inSection:[indexPath section]];
+        
+        
+        NSLog(@"%@:  %@", ((ButtonCell *)cell).nameLabel, [self titleOfRow:[indexPath row] inSection:[indexPath section]]);
 		[(ButtonCell *)cell layoutSubviews];
 	}
     

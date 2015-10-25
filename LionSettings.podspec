@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "LionSettings is a settings framework for iOS, it can adapt in app UI."
 
   s.description  = <<-DESC
-                   LionSettings is a settings framework for iOS, it can adapt in app UI.
+                   LionSettings is a settings framework for iOS, it can adapt in app UI...
                    DESC
 
   s.homepage     = "https://github.com/xudeheng/LionSettings"

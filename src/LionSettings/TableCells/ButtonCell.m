@@ -19,6 +19,25 @@ NSString *kButtonCell_ID = @"ButtonCell_ID";
 
 @synthesize nameLabel;
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // turn off selection use
+        self.selectionStyle = UITableViewCellSelectionStyleBlue;
+        
+        nameLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        nameLabel.backgroundColor = [UIColor clearColor];
+        nameLabel.opaque = NO;
+        nameLabel.textColor = [UIColor darkGrayColor];
+        nameLabel.highlightedTextColor = [UIColor whiteColor];
+        nameLabel.font = [UIFont boldSystemFontOfSize:18];
+        nameLabel.textAlignment = NSTextAlignmentCenter;
+        [self.contentView addSubview:nameLabel];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)aRect reuseIdentifier:(NSString *)identifier
 {
 	if (self = [super initWithFrame:aRect reuseIdentifier:identifier])
