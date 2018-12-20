@@ -14,6 +14,34 @@ LionSettings is a iOS app settings compatitable framework based on LlamaSettings
 5)Support extra customized type, to be continue...
 
 
+## Component Types
+
+### Compatitable with Official types
+
+PSToggleSwitchSpecifier
+
+PSSliderSpecifier
+
+PSTitleValueSpecifier
+
+PSTextFieldSpecifier
+
+PSMultiValueSpecifier
+
+### Custom types
+
+BLColorPickerSpecifier
+
+BLFullButtonSpecifier
+
+BLURLButtonSpecifier
+
+BLSegmentedSpecifier
+
+BLVolumeSpecifier
+
+PSChildPaneSpecifier
+
 ## Example
 
 ####use Settings.bundle directly.
