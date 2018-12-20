@@ -44,14 +44,14 @@ PSChildPaneSpecifier
 
 ## Example
 
-####use Settings.bundle directly.
+#### Use Settings.bundle directly.
 		
 		LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] init] autorelease];
 	    //LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings" andPlistName:@"Root"] autorelease];
 
 		[self.navigationController pushViewController:lsvc];
 		
-####use you own MySettings.bundle
+#### Use you own MySettings.bundle
 		
 		LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings"] autorelease];
 	    //LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings" andPlistName:@"Root"] autorelease];
@@ -59,6 +59,8 @@ PSChildPaneSpecifier
 		[self.navigationController pushViewController:lsvc];
 		
 
-## Special thanks to
+## Origin reference:
+
 [LlamaSettings origin project](https://code.google.com/p/llamasettings/)
 Thanks to yorgle http://umlautllama.com/
+
