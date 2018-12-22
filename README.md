@@ -46,18 +46,23 @@ PSChildPaneSpecifier
 
 #### Use Settings.bundle directly.
 		
-		LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] init] autorelease];
-	    //LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings" andPlistName:@"Root"] autorelease];
+```
 
-		[self.navigationController pushViewController:lsvc];
-		
+LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] init] autorelease];
+//LionSettingsViewController *lsvc = [[LionSettingsViewController alloc] initWithSettingsBundleName:@"Settings" andPlistName:@"Root"] autorelease];
+
+[self.navigationController pushViewController:lsvc];
+
+```
+
 #### Use you own MySettings.bundle
 		
-		LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings"] autorelease];
-	    //LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings" andPlistName:@"Root"] autorelease];
+```
+LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings"] autorelease];
+//LionSettingsViewController *lsvc = [[[LionSettingsViewController alloc] initWithSettingsBundleName:@"CustomSettings" andPlistName:@"Root"] autorelease];
 
-		[self.navigationController pushViewController:lsvc];
-		
+[self.navigationController pushViewController:lsvc];
+```
 
 ## Origin reference:
 
